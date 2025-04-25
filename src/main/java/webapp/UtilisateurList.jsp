@@ -15,7 +15,7 @@ License Type: Purchased-->
 <h1>Utilisateur List</h1>
 <table border="1" width="80%">
 	<tr>
-		<td>ID(PK)</td>
+		<td>ID</td>
 		<td>Nom</td>
 		<td>Email</td>
 		<td></td>

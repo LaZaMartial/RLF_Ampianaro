@@ -15,11 +15,11 @@ License Type: Purchased-->
 <h1>Don List</h1>
 <table border="1" width="80%">
 	<tr>
-		<td>ID(PK)</td>
+		<td>ID</td>
 		<td>Montant</td>
 		<td>DateEnvoi</td>
-		<td>Donateur(FK)</td>
-		<td>ProjetEducatif(FK)</td>
+		<td>Donateur</td>
+		<td>ProjetEducatif</td>
 		<td></td>
 	</tr>
 <%

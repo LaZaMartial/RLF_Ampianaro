@@ -32,10 +32,6 @@ function listAll()  {
 <form method="POST" name="form1" action=Utilisateur.jsp>
 	<table>
 		<tr>
-			<td>*ID : </td>
-			<td><input type=text name="ID" value="<jsp:getProperty name="UtilisateurBean" property="ID"/>" /></td>
-		</tr>
-		<tr>
 			<td>Nom : </td>
 			<td><input type=text name="nom" value="<jsp:getProperty name="UtilisateurBean" property="nom"/>" /></td>
 		</tr>

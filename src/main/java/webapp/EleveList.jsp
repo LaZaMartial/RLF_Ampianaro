@@ -15,7 +15,7 @@ License Type: Purchased-->
 <h1>Eleve List</h1>
 <table border="1" width="80%">
 	<tr>
-		<td>ID(PK)</td>
+		<td>ID</td>
 		<td>Biographie</td>
 		<td>NiveauScolaire</td>
 		<td>DateNaissance</td>

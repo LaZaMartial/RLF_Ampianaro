@@ -182,7 +182,12 @@ public class DonProcessor {
 		}
 		
 		try  {
+			//			C'est ici qu'on met a jour le montant collecte
 			class_diagram_orm.ProjetEducatif _projetEducatif = class_diagram_orm.ProjetEducatif.loadProjetEducatifByORMID(getProjetEducatif_projetEducatifID());
+			System.out.println("montantCollecte = " + _projetEducatif.getMontantCollecte());
+			System.out.println("montantDon = " +  _don.getMontant());
+			float nouveauMontant = _projetEducatif.getMontantCollecte() + _don.getMontant();
+			_projetEducatif.setMontantCollecte(nouveauMontant);
 			_don.setProjetEducatif(_projetEducatif);
 		}
 		catch (PersistentException e) {
@@ -191,4 +196,5 @@ public class DonProcessor {
 	}
 	
 }
+
 

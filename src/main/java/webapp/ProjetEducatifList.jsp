@@ -15,14 +15,14 @@ License Type: Purchased-->
 <h1>ProjetEducatif List</h1>
 <table border="1" width="80%">
 	<tr>
-		<td>ID(PK)</td>
+		<td>ID</td>
 		<td>Titre</td>
 		<td>Description</td>
 		<td>MontantObjectif</td>
 		<td>MontantCollecte</td>
 		<td>Statut</td>
 		<td>DateCreation</td>
-		<td>Eleve(FK)</td>
+		<td>Eleve</td>
 		<td></td>
 	</tr>
 <%
