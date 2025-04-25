@@ -60,7 +60,7 @@ function listAll()  {
 			<td><input type=text name="dateCreation" value="<jsp:getProperty name="ProjetEducatifBean" property="dateCreation"/>" /></td>
 		</tr>
 		<tr>
-			<td>Eleve_eleveID : </td>
+			<td>EleveID : </td>
 			<td><input type=text name="eleve_eleveID" value="<jsp:getProperty name="ProjetEducatifBean" property="eleve_eleveID"/>" /></td>
 		</tr>
 	</table>

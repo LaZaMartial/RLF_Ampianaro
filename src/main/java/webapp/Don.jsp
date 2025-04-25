@@ -44,11 +44,11 @@ function listAll()  {
 			<td><input type=text name="dateEnvoi" value="<jsp:getProperty name="DonBean" property="dateEnvoi"/>" /></td>
 		</tr>
 		<tr>
-			<td>Donateur_donateurID : </td>
+			<td>DonateurID : </td>
 			<td><input type=text name="donateur_donateurID" value="<jsp:getProperty name="DonBean" property="donateur_donateurID"/>" /></td>
 		</tr>
 		<tr>
-			<td>ProjetEducatif_projetEducatifID : </td>
+			<td>ProjetEducatifID : </td>
 			<td><input type=text name="projetEducatif_projetEducatifID" value="<jsp:getProperty name="DonBean" property="projetEducatif_projetEducatifID"/>" /></td>
 		</tr>
 	</table>
