@@ -362,7 +362,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 		
 	};
 	
-	private String Biographie;
+	private String biographie;
 	
 	private String niveauScolaire;
 	
@@ -371,11 +371,11 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	private java.util.Set ORM_projetEducatifs = new java.util.HashSet();
 	
 	public void setBiographie(String value) {
-		this.Biographie = value;
+		this.biographie = value;
 	}
 	
 	public String getBiographie() {
-		return Biographie;
+		return biographie;
 	}
 	
 	public void setNiveauScolaire(String value) {

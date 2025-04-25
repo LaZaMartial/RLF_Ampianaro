@@ -21,7 +21,7 @@ public class EleveProcessor {
 	
 	private String email;
 	
-	private String Biographie;
+	private String biographie;
 	
 	private String niveauScolaire;
 	
@@ -54,11 +54,11 @@ public class EleveProcessor {
 	}
 	
 	public void setBiographie(String value) {
-		this.Biographie = value;
+		this.biographie = value;
 	}
 	
 	public String getBiographie() {
-		return Biographie == null ? "" : Biographie;
+		return biographie == null ? "" : biographie;
 	}
 	
 	public void setNiveauScolaire(String value) {

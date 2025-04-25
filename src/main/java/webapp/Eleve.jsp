@@ -37,7 +37,7 @@ function listAll()  {
 		</tr>
 		<tr>
 			<td>Biographie : </td>
-			<td><input type=text name="Biographie" value="<jsp:getProperty name="EleveBean" property="biographie"/>" /></td>
+			<td><input type=text name="biographie" value="<jsp:getProperty name="EleveBean" property="biographie"/>" /></td>
 		</tr>
 		<tr>
 			<td>NiveauScolaire : </td>

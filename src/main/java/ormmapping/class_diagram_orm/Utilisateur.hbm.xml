@@ -30,7 +30,7 @@ License Type: Purchased
 			<key>
 				<column name="IDUtilisateur"/>
 			</key>
-			<property name="Biographie" column="Biographie" type="text" not-null="false" lazy="false"/>
+			<property name="biographie" column="Biographie" type="string" length="255" not-null="false" lazy="false"/>
 			<property name="niveauScolaire" column="NiveauScolaire" type="string" length="255" not-null="false" lazy="false"/>
 			<property name="dateNaissance" column="DateNaissance" type="string" length="255" not-null="false" lazy="false"/>
 			<set name="ORM_ProjetEducatifs" lazy="true" cascade="save-update,lock" inverse="true">

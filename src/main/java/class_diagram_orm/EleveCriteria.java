@@ -22,7 +22,7 @@ public class EleveCriteria extends AbstractORMCriteria {
 	public final IntegerExpression ID;
 	public final StringExpression nom;
 	public final StringExpression email;
-	public final StringExpression Biographie;
+	public final StringExpression biographie;
 	public final StringExpression niveauScolaire;
 	public final StringExpression dateNaissance;
 	public final CollectionExpression projetEducatifs;
@@ -32,7 +32,7 @@ public class EleveCriteria extends AbstractORMCriteria {
 		ID = new IntegerExpression("ID", this);
 		nom = new StringExpression("nom", this);
 		email = new StringExpression("email", this);
-		Biographie = new StringExpression("Biographie", this);
+		biographie = new StringExpression("biographie", this);
 		niveauScolaire = new StringExpression("niveauScolaire", this);
 		dateNaissance = new StringExpression("dateNaissance", this);
 		projetEducatifs = new CollectionExpression("ORM_ProjetEducatifs", this);

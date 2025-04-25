@@ -6,7 +6,7 @@
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>0</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -37,7 +37,7 @@
     </Column>
   </Entity>
   <Entity name="ProjetEducatif" Unlogged="false" PKClustered="0">
-    <Column name="IDProjetEducatif">
+    <Column name="IdProjetEducatif">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
@@ -51,9 +51,9 @@
     <Column name="IDUtilisateur">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Eleve.IDUtilisateur</ReferencedColumn>
+      <ReferencedColumn>class_diagram_orm.Eleve.IDUtilisateur</ReferencedColumn>
       <Type>9</Type>
-      <Length>0</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -74,8 +74,8 @@
     <Column name="Description">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>34</Type>
-      <Length>0</Length>
+      <Type>27</Type>
+      <Length>255</Length>
       <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -131,8 +131,8 @@
     <Column name="Biographie">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>34</Type>
-      <Length>0</Length>
+      <Type>27</Type>
+      <Length>255</Length>
       <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -164,9 +164,9 @@
     <Column name="IDUtilisateur">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Utilisateur.IDUtilisateur</ReferencedColumn>
+      <ReferencedColumn>class_diagram_orm.Utilisateur.IDUtilisateur</ReferencedColumn>
       <Type>9</Type>
-      <Length>0</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -178,9 +178,9 @@
     <Column name="IDUtilisateur">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Utilisateur.IDUtilisateur</ReferencedColumn>
+      <ReferencedColumn>class_diagram_orm.Utilisateur.IDUtilisateur</ReferencedColumn>
       <Type>9</Type>
-      <Length>0</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -192,9 +192,9 @@
     <Column name="IDUtilisateur">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Utilisateur.IDUtilisateur</ReferencedColumn>
+      <ReferencedColumn>class_diagram_orm.Utilisateur.IDUtilisateur</ReferencedColumn>
       <Type>9</Type>
-      <Length>0</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -217,19 +217,19 @@
     <Column name="IDUtilisateur">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Donateur.IDUtilisateur</ReferencedColumn>
+      <ReferencedColumn>class_diagram_orm.Donateur.IDUtilisateur</ReferencedColumn>
       <Type>9</Type>
-      <Length>0</Length>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IDProjetEducatif">
+    <Column name="IdProjetEducatif">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>ProjetEducatif.IDProjetEducatif</ReferencedColumn>
+      <ReferencedColumn>class_diagram_orm.ProjetEducatif.IdProjetEducatif</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -305,10 +305,10 @@
     <ReferenceTable>Don</ReferenceTable>
     <ReferencedTable>ProjetEducatif</ReferencedTable>
     <Columns>
-      <Column>IDProjetEducatif</Column>
+      <Column>IdProjetEducatif</Column>
     </Columns>
     <RefColumns>
-      <Column>IDProjetEducatif</Column>
+      <Column>IdProjetEducatif</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="faire">
