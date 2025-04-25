@@ -1,0 +1,1 @@
+@call RunSample ormsamples.DropAmpianaro2DatabaseSchema

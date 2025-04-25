@@ -1,0 +1,12 @@
+CREATE TABLE Utilisateur (IDUtilisateur SERIAL NOT NULL, Nom varchar(255), Email varchar(255), PRIMARY KEY (IDUtilisateur));
+CREATE TABLE ProjetEducatif (IDProjetEducatif SERIAL NOT NULL, IDUtilisateur int4 NOT NULL, Titre varchar(255), Description varchar(255), MontantObjectif float4 NOT NULL, MontantCollecte float4 NOT NULL, Statut varchar(255), DateCreation varchar(255), PRIMARY KEY (IDProjetEducatif));
+CREATE TABLE Eleve (Biographie varchar(255), NiveauScolaire varchar(255), DateNaissance varchar(255), IDUtilisateur int4 NOT NULL, PRIMARY KEY (IDUtilisateur));
+CREATE TABLE Donateur (IDUtilisateur int4 NOT NULL, PRIMARY KEY (IDUtilisateur));
+CREATE TABLE Administrateur (IDUtilisateur int4 NOT NULL, PRIMARY KEY (IDUtilisateur));
+CREATE TABLE Don (IdDon SERIAL NOT NULL, IDUtilisateur int4 NOT NULL, IDProjetEducatif int4 NOT NULL, Montant float4 NOT NULL, DateEnvoi varchar(255), PRIMARY KEY (IdDon));
+ALTER TABLE Eleve ADD CONSTRAINT FKEleve348877 FOREIGN KEY (IDUtilisateur) REFERENCES Utilisateur (IDUtilisateur);
+ALTER TABLE Donateur ADD CONSTRAINT FKDonateur635061 FOREIGN KEY (IDUtilisateur) REFERENCES Utilisateur (IDUtilisateur);
+ALTER TABLE Administrateur ADD CONSTRAINT FKAdministra684103 FOREIGN KEY (IDUtilisateur) REFERENCES Utilisateur (IDUtilisateur);
+ALTER TABLE ProjetEducatif ADD CONSTRAINT posseder FOREIGN KEY (IDUtilisateur) REFERENCES Eleve (IDUtilisateur);
+ALTER TABLE Don ADD CONSTRAINT recevoir FOREIGN KEY (IDProjetEducatif) REFERENCES ProjetEducatif (IDProjetEducatif);
+ALTER TABLE Don ADD CONSTRAINT faire FOREIGN KEY (IDUtilisateur) REFERENCES Donateur (IDUtilisateur);
