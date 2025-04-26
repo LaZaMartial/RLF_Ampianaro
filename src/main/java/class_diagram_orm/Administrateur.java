@@ -24,7 +24,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur loadAdministrateurByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadAdministrateurByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -35,7 +35,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur getAdministrateurByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getAdministrateurByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -46,7 +46,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur loadAdministrateurByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadAdministrateurByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -57,7 +57,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur getAdministrateurByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getAdministrateurByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -108,7 +108,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static List queryAdministrateur(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryAdministrateur(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -119,7 +119,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static List queryAdministrateur(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryAdministrateur(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -130,7 +130,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur[] listAdministrateurByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listAdministrateurByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -141,7 +141,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur[] listAdministrateurByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listAdministrateurByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -207,7 +207,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur loadAdministrateurByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadAdministrateurByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -218,7 +218,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static Administrateur loadAdministrateurByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadAdministrateurByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -245,7 +245,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static java.util.Iterator iterateAdministrateurByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateAdministrateurByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -256,7 +256,7 @@ public class Administrateur extends class_diagram_orm.Utilisateur {
 	
 	public static java.util.Iterator iterateAdministrateurByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateAdministrateurByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {

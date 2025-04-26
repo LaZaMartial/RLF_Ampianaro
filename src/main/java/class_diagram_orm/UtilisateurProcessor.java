@@ -21,6 +21,8 @@ public class UtilisateurProcessor {
 	
 	private String email;
 	
+	private String motDePasse;
+	
 	private String action="";
 	
 	public void setID(int value) {
@@ -45,6 +47,14 @@ public class UtilisateurProcessor {
 	
 	public String getEmail() {
 		return email == null ? "" : email;
+	}
+	
+	public void setMotDePasse(String value) {
+		this.motDePasse = value;
+	}
+	
+	public String getMotDePasse() {
+		return motDePasse == null ? "" : motDePasse;
 	}
 	
 	public String getAction() {
@@ -132,12 +142,14 @@ public class UtilisateurProcessor {
 	private void copyFromBean(class_diagram_orm.Utilisateur _utilisateur) {
 		setNom(_utilisateur.getNom());
 		setEmail(_utilisateur.getEmail());
+		setMotDePasse(_utilisateur.getMotDePasse());
 		setID(_utilisateur.getORMID());
 	}
 	
 	private void copyToBean(class_diagram_orm.Utilisateur _utilisateur) {
 		_utilisateur.setNom(getNom());
 		_utilisateur.setEmail(getEmail());
+		_utilisateur.setMotDePasse(getMotDePasse());
 	}
 	
 }

@@ -22,6 +22,7 @@ public class DonateurDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression ID;
 	public final StringExpression nom;
 	public final StringExpression email;
+	public final StringExpression motDePasse;
 	public final CollectionExpression dons;
 	
 	public DonateurDetachedCriteria() {
@@ -29,6 +30,7 @@ public class DonateurDetachedCriteria extends AbstractORMDetachedCriteria {
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
 		nom = new StringExpression("nom", this.getDetachedCriteria());
 		email = new StringExpression("email", this.getDetachedCriteria());
+		motDePasse = new StringExpression("motDePasse", this.getDetachedCriteria());
 		dons = new CollectionExpression("ORM_Dons", this.getDetachedCriteria());
 	}
 	
@@ -37,6 +39,7 @@ public class DonateurDetachedCriteria extends AbstractORMDetachedCriteria {
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
 		nom = new StringExpression("nom", this.getDetachedCriteria());
 		email = new StringExpression("email", this.getDetachedCriteria());
+		motDePasse = new StringExpression("motDePasse", this.getDetachedCriteria());
 		dons = new CollectionExpression("ORM_Dons", this.getDetachedCriteria());
 	}
 	

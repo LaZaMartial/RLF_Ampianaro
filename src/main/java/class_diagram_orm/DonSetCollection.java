@@ -95,7 +95,7 @@ public class DonSetCollection extends org.orm.util.ORMSet {
 	}
 	
 	protected PersistentManager getPersistentManager() throws PersistentException {
-		return Ampianaro2PersistentManager.instance();
+		return Ampianaro3PersistentManager.instance();
 	}
 	
 }

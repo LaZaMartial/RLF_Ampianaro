@@ -22,6 +22,7 @@ public class EleveDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression ID;
 	public final StringExpression nom;
 	public final StringExpression email;
+	public final StringExpression motDePasse;
 	public final StringExpression biographie;
 	public final StringExpression niveauScolaire;
 	public final StringExpression dateNaissance;
@@ -32,6 +33,7 @@ public class EleveDetachedCriteria extends AbstractORMDetachedCriteria {
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
 		nom = new StringExpression("nom", this.getDetachedCriteria());
 		email = new StringExpression("email", this.getDetachedCriteria());
+		motDePasse = new StringExpression("motDePasse", this.getDetachedCriteria());
 		biographie = new StringExpression("biographie", this.getDetachedCriteria());
 		niveauScolaire = new StringExpression("niveauScolaire", this.getDetachedCriteria());
 		dateNaissance = new StringExpression("dateNaissance", this.getDetachedCriteria());
@@ -43,6 +45,7 @@ public class EleveDetachedCriteria extends AbstractORMDetachedCriteria {
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
 		nom = new StringExpression("nom", this.getDetachedCriteria());
 		email = new StringExpression("email", this.getDetachedCriteria());
+		motDePasse = new StringExpression("motDePasse", this.getDetachedCriteria());
 		biographie = new StringExpression("biographie", this.getDetachedCriteria());
 		niveauScolaire = new StringExpression("niveauScolaire", this.getDetachedCriteria());
 		dateNaissance = new StringExpression("dateNaissance", this.getDetachedCriteria());

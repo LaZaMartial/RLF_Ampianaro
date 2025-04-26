@@ -24,7 +24,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif loadProjetEducatifByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadProjetEducatifByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -35,7 +35,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif getProjetEducatifByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getProjetEducatifByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -46,7 +46,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif loadProjetEducatifByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadProjetEducatifByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -57,7 +57,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif getProjetEducatifByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getProjetEducatifByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -108,7 +108,7 @@ public class ProjetEducatif {
 	
 	public static List queryProjetEducatif(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryProjetEducatif(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -119,7 +119,7 @@ public class ProjetEducatif {
 	
 	public static List queryProjetEducatif(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryProjetEducatif(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -130,7 +130,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif[] listProjetEducatifByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listProjetEducatifByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -141,7 +141,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif[] listProjetEducatifByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listProjetEducatifByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -207,7 +207,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif loadProjetEducatifByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadProjetEducatifByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -218,7 +218,7 @@ public class ProjetEducatif {
 	
 	public static ProjetEducatif loadProjetEducatifByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadProjetEducatifByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -245,7 +245,7 @@ public class ProjetEducatif {
 	
 	public static java.util.Iterator iterateProjetEducatifByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateProjetEducatifByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -256,7 +256,7 @@ public class ProjetEducatif {
 	
 	public static java.util.Iterator iterateProjetEducatifByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateProjetEducatifByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -316,7 +316,7 @@ public class ProjetEducatif {
 	
 	public boolean save() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().saveObject(this);
+			Ampianaro3PersistentManager.instance().saveObject(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -327,7 +327,7 @@ public class ProjetEducatif {
 	
 	public boolean delete() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().deleteObject(this);
+			Ampianaro3PersistentManager.instance().deleteObject(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -338,7 +338,7 @@ public class ProjetEducatif {
 	
 	public boolean refresh() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().getSession().refresh(this);
+			Ampianaro3PersistentManager.instance().getSession().refresh(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -349,7 +349,7 @@ public class ProjetEducatif {
 	
 	public boolean evict() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().getSession().evict(this);
+			Ampianaro3PersistentManager.instance().getSession().evict(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -436,7 +436,7 @@ public class ProjetEducatif {
 	
 	private float montantCollecte;
 	
-	private String statut;
+	private String status;
 	
 	private String dateCreation;
 	
@@ -486,12 +486,12 @@ public class ProjetEducatif {
 		return montantCollecte;
 	}
 	
-	public void setStatut(String value) {
-		this.statut = value;
+	public void setStatus(String value) {
+		this.status = value;
 	}
 	
-	public String getStatut() {
-		return statut;
+	public String getStatus() {
+		return status;
 	}
 	
 	public void setDateCreation(String value) {

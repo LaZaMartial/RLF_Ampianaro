@@ -51,6 +51,10 @@ function listAll()  {
 			<td>Email : </td>
 			<td><input type=text name="email" value="<jsp:getProperty name="EleveBean" property="email"/>" /></td>
 		</tr>
+		<tr>
+			<td>MotDePasse : </td>
+			<td><input type=text name="motDePasse" value="<jsp:getProperty name="EleveBean" property="motDePasse"/>" /></td>
+		</tr>
 	</table>
 	<INPUT type="hidden" name="action" value="">
 	<hr>

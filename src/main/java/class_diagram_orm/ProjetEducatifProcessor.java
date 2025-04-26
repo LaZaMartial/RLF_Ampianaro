@@ -25,7 +25,7 @@ public class ProjetEducatifProcessor {
 	
 	private float montantCollecte;
 	
-	private String statut;
+	private String status;
 	
 	private String dateCreation;
 	
@@ -71,12 +71,12 @@ public class ProjetEducatifProcessor {
 		return montantCollecte;
 	}
 	
-	public void setStatut(String value) {
-		this.statut = value;
+	public void setStatus(String value) {
+		this.status = value;
 	}
 	
-	public String getStatut() {
-		return statut == null ? "" : statut;
+	public String getStatus() {
+		return status == null ? "" : status;
 	}
 	
 	public void setDateCreation(String value) {
@@ -184,7 +184,7 @@ public class ProjetEducatifProcessor {
 		setDescription(_projetEducatif.getDescription());
 		setMontantObjectif(_projetEducatif.getMontantObjectif());
 		setMontantCollecte(_projetEducatif.getMontantCollecte());
-		setStatut(_projetEducatif.getStatut());
+		setStatus(_projetEducatif.getStatus());
 		setDateCreation(_projetEducatif.getDateCreation());
 		setID(_projetEducatif.getORMID());
 		
@@ -202,7 +202,7 @@ public class ProjetEducatifProcessor {
 		_projetEducatif.setDescription(getDescription());
 		_projetEducatif.setMontantObjectif(getMontantObjectif());
 		_projetEducatif.setMontantCollecte(getMontantCollecte());
-		_projetEducatif.setStatut(getStatut());
+		_projetEducatif.setStatus(getStatus());
 		_projetEducatif.setDateCreation(getDateCreation());
 		try  {
 			class_diagram_orm.Eleve _eleve = class_diagram_orm.Eleve.loadEleveByORMID(getEleve_eleveID());

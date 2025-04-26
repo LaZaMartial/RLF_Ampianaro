@@ -22,6 +22,7 @@ public class DonateurCriteria extends AbstractORMCriteria {
 	public final IntegerExpression ID;
 	public final StringExpression nom;
 	public final StringExpression email;
+	public final StringExpression motDePasse;
 	public final CollectionExpression dons;
 	
 	public DonateurCriteria(Criteria criteria) {
@@ -29,6 +30,7 @@ public class DonateurCriteria extends AbstractORMCriteria {
 		ID = new IntegerExpression("ID", this);
 		nom = new StringExpression("nom", this);
 		email = new StringExpression("email", this);
+		motDePasse = new StringExpression("motDePasse", this);
 		dons = new CollectionExpression("ORM_Dons", this);
 	}
 	
@@ -37,7 +39,7 @@ public class DonateurCriteria extends AbstractORMCriteria {
 	}
 	
 	public DonateurCriteria() throws PersistentException {
-		this(Ampianaro2PersistentManager.instance().getSession());
+		this(Ampianaro3PersistentManager.instance().getSession());
 	}
 	
 	public DonCriteria createDonsCriteria() {

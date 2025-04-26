@@ -170,7 +170,7 @@ public class DonProcessor {
 		}
 		
 	}
-	
+
 	private void copyToBean(class_diagram_orm.Don _don) {
 		_don.setMontant(getMontant());
 		_don.setDateEnvoi(getDateEnvoi());
@@ -180,7 +180,7 @@ public class DonProcessor {
 		}
 		catch (PersistentException e) {
 		}
-		
+
 		try  {
 			//			C'est ici qu'on met a jour le montant collecte
 			class_diagram_orm.ProjetEducatif _projetEducatif = class_diagram_orm.ProjetEducatif.loadProjetEducatifByORMID(getProjetEducatif_projetEducatifID());
@@ -192,9 +192,8 @@ public class DonProcessor {
 		}
 		catch (PersistentException e) {
 		}
-		
+
 	}
 	
 }
-
 

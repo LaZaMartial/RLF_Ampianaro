@@ -26,7 +26,7 @@ public class ProjetEducatifDetachedCriteria extends AbstractORMDetachedCriteria 
 	public final StringExpression description;
 	public final FloatExpression montantObjectif;
 	public final FloatExpression montantCollecte;
-	public final StringExpression statut;
+	public final StringExpression status;
 	public final StringExpression dateCreation;
 	public final CollectionExpression dons;
 	
@@ -39,7 +39,7 @@ public class ProjetEducatifDetachedCriteria extends AbstractORMDetachedCriteria 
 		description = new StringExpression("description", this.getDetachedCriteria());
 		montantObjectif = new FloatExpression("montantObjectif", this.getDetachedCriteria());
 		montantCollecte = new FloatExpression("montantCollecte", this.getDetachedCriteria());
-		statut = new StringExpression("statut", this.getDetachedCriteria());
+		status = new StringExpression("status", this.getDetachedCriteria());
 		dateCreation = new StringExpression("dateCreation", this.getDetachedCriteria());
 		dons = new CollectionExpression("ORM_Dons", this.getDetachedCriteria());
 	}
@@ -53,7 +53,7 @@ public class ProjetEducatifDetachedCriteria extends AbstractORMDetachedCriteria 
 		description = new StringExpression("description", this.getDetachedCriteria());
 		montantObjectif = new FloatExpression("montantObjectif", this.getDetachedCriteria());
 		montantCollecte = new FloatExpression("montantCollecte", this.getDetachedCriteria());
-		statut = new StringExpression("statut", this.getDetachedCriteria());
+		status = new StringExpression("status", this.getDetachedCriteria());
 		dateCreation = new StringExpression("dateCreation", this.getDetachedCriteria());
 		dons = new CollectionExpression("ORM_Dons", this.getDetachedCriteria());
 	}

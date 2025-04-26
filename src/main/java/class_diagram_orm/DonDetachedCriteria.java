@@ -20,20 +20,20 @@ import org.orm.criteria.*;
 
 public class DonDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression ID;
-	public final IntegerExpression donateurId;
-	public final AssociationExpression donateur;
 	public final IntegerExpression projetEducatifId;
 	public final AssociationExpression projetEducatif;
+	public final IntegerExpression donateurId;
+	public final AssociationExpression donateur;
 	public final FloatExpression montant;
 	public final StringExpression dateEnvoi;
 	
 	public DonDetachedCriteria() {
 		super(class_diagram_orm.Don.class, class_diagram_orm.DonCriteria.class);
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
-		donateurId = new IntegerExpression("donateur.", this.getDetachedCriteria());
-		donateur = new AssociationExpression("donateur", this.getDetachedCriteria());
 		projetEducatifId = new IntegerExpression("projetEducatif.ID", this.getDetachedCriteria());
 		projetEducatif = new AssociationExpression("projetEducatif", this.getDetachedCriteria());
+		donateurId = new IntegerExpression("donateur.", this.getDetachedCriteria());
+		donateur = new AssociationExpression("donateur", this.getDetachedCriteria());
 		montant = new FloatExpression("montant", this.getDetachedCriteria());
 		dateEnvoi = new StringExpression("dateEnvoi", this.getDetachedCriteria());
 	}
@@ -41,20 +41,20 @@ public class DonDetachedCriteria extends AbstractORMDetachedCriteria {
 	public DonDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, class_diagram_orm.DonCriteria.class);
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
-		donateurId = new IntegerExpression("donateur.", this.getDetachedCriteria());
-		donateur = new AssociationExpression("donateur", this.getDetachedCriteria());
 		projetEducatifId = new IntegerExpression("projetEducatif.ID", this.getDetachedCriteria());
 		projetEducatif = new AssociationExpression("projetEducatif", this.getDetachedCriteria());
+		donateurId = new IntegerExpression("donateur.", this.getDetachedCriteria());
+		donateur = new AssociationExpression("donateur", this.getDetachedCriteria());
 		montant = new FloatExpression("montant", this.getDetachedCriteria());
 		dateEnvoi = new StringExpression("dateEnvoi", this.getDetachedCriteria());
 	}
 	
-	public DonateurDetachedCriteria createDonateurCriteria() {
-		return new DonateurDetachedCriteria(createCriteria("donateur"));
-	}
-	
 	public ProjetEducatifDetachedCriteria createProjetEducatifCriteria() {
 		return new ProjetEducatifDetachedCriteria(createCriteria("projetEducatif"));
+	}
+	
+	public DonateurDetachedCriteria createDonateurCriteria() {
+		return new DonateurDetachedCriteria(createCriteria("donateur"));
 	}
 	
 	public Don uniqueDon(PersistentSession session) {

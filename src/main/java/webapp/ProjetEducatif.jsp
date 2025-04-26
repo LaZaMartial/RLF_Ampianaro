@@ -48,8 +48,8 @@ function listAll()  {
 			<td><input type=text name="montantCollecte" value="<jsp:getProperty name="ProjetEducatifBean" property="montantCollecte"/>" /></td>
 		</tr>
 		<tr>
-			<td>Statut : </td>
-			<td><input type=text name="statut" value="<jsp:getProperty name="ProjetEducatifBean" property="statut"/>" /></td>
+			<td>Status : </td>
+			<td><input type=text name="status" value="<jsp:getProperty name="ProjetEducatifBean" property="status"/>" /></td>
 		</tr>
 		<tr>
 			<td>DateCreation : </td>

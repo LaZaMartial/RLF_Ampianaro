@@ -24,7 +24,7 @@ public class Utilisateur {
 	
 	public static Utilisateur loadUtilisateurByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadUtilisateurByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -35,7 +35,7 @@ public class Utilisateur {
 	
 	public static Utilisateur getUtilisateurByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getUtilisateurByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -46,7 +46,7 @@ public class Utilisateur {
 	
 	public static Utilisateur loadUtilisateurByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadUtilisateurByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -57,7 +57,7 @@ public class Utilisateur {
 	
 	public static Utilisateur getUtilisateurByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getUtilisateurByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -108,7 +108,7 @@ public class Utilisateur {
 	
 	public static List queryUtilisateur(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryUtilisateur(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -119,7 +119,7 @@ public class Utilisateur {
 	
 	public static List queryUtilisateur(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryUtilisateur(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -130,7 +130,7 @@ public class Utilisateur {
 	
 	public static Utilisateur[] listUtilisateurByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listUtilisateurByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -141,7 +141,7 @@ public class Utilisateur {
 	
 	public static Utilisateur[] listUtilisateurByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listUtilisateurByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -207,7 +207,7 @@ public class Utilisateur {
 	
 	public static Utilisateur loadUtilisateurByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadUtilisateurByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -218,7 +218,7 @@ public class Utilisateur {
 	
 	public static Utilisateur loadUtilisateurByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadUtilisateurByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -245,7 +245,7 @@ public class Utilisateur {
 	
 	public static java.util.Iterator iterateUtilisateurByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateUtilisateurByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -256,7 +256,7 @@ public class Utilisateur {
 	
 	public static java.util.Iterator iterateUtilisateurByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateUtilisateurByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -316,7 +316,7 @@ public class Utilisateur {
 	
 	public boolean save() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().saveObject(this);
+			Ampianaro3PersistentManager.instance().saveObject(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -327,7 +327,7 @@ public class Utilisateur {
 	
 	public boolean delete() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().deleteObject(this);
+			Ampianaro3PersistentManager.instance().deleteObject(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -338,7 +338,7 @@ public class Utilisateur {
 	
 	public boolean refresh() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().getSession().refresh(this);
+			Ampianaro3PersistentManager.instance().getSession().refresh(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -349,7 +349,7 @@ public class Utilisateur {
 	
 	public boolean evict() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().getSession().evict(this);
+			Ampianaro3PersistentManager.instance().getSession().evict(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -363,6 +363,8 @@ public class Utilisateur {
 	private String nom;
 	
 	private String email;
+	
+	private String motDePasse;
 	
 	private void setID(int value) {
 		this.ID = value;
@@ -390,6 +392,14 @@ public class Utilisateur {
 	
 	public String getEmail() {
 		return email;
+	}
+	
+	public void setMotDePasse(String value) {
+		this.motDePasse = value;
+	}
+	
+	public String getMotDePasse() {
+		return motDePasse;
 	}
 	
 	public String toString() {

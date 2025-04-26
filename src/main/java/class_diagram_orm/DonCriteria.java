@@ -20,20 +20,20 @@ import org.orm.criteria.*;
 
 public class DonCriteria extends AbstractORMCriteria {
 	public final IntegerExpression ID;
-	public final IntegerExpression donateurId;
-	public final AssociationExpression donateur;
 	public final IntegerExpression projetEducatifId;
 	public final AssociationExpression projetEducatif;
+	public final IntegerExpression donateurId;
+	public final AssociationExpression donateur;
 	public final FloatExpression montant;
 	public final StringExpression dateEnvoi;
 	
 	public DonCriteria(Criteria criteria) {
 		super(criteria);
 		ID = new IntegerExpression("ID", this);
-		donateurId = new IntegerExpression("donateur.", this);
-		donateur = new AssociationExpression("donateur", this);
 		projetEducatifId = new IntegerExpression("projetEducatif.ID", this);
 		projetEducatif = new AssociationExpression("projetEducatif", this);
+		donateurId = new IntegerExpression("donateur.", this);
+		donateur = new AssociationExpression("donateur", this);
 		montant = new FloatExpression("montant", this);
 		dateEnvoi = new StringExpression("dateEnvoi", this);
 	}
@@ -43,15 +43,15 @@ public class DonCriteria extends AbstractORMCriteria {
 	}
 	
 	public DonCriteria() throws PersistentException {
-		this(Ampianaro2PersistentManager.instance().getSession());
-	}
-	
-	public DonateurCriteria createDonateurCriteria() {
-		return new DonateurCriteria(createCriteria("donateur"));
+		this(Ampianaro3PersistentManager.instance().getSession());
 	}
 	
 	public ProjetEducatifCriteria createProjetEducatifCriteria() {
 		return new ProjetEducatifCriteria(createCriteria("projetEducatif"));
+	}
+	
+	public DonateurCriteria createDonateurCriteria() {
+		return new DonateurCriteria(createCriteria("donateur"));
 	}
 	
 	public Don uniqueDon() {

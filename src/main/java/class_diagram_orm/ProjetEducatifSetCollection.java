@@ -75,7 +75,7 @@ public class ProjetEducatifSetCollection extends org.orm.util.ORMSet {
 	 * <li>description</li>
 	 * <li>montantObjectif</li>
 	 * <li>montantCollecte</li>
-	 * <li>statut</li>
+	 * <li>status</li>
 	 * <li>dateCreation</li>
 	 * </ul>
 	 * @return The persistent objects sorted array
@@ -92,7 +92,7 @@ public class ProjetEducatifSetCollection extends org.orm.util.ORMSet {
 	 * <li>description</li>
 	 * <li>montantObjectif</li>
 	 * <li>montantCollecte</li>
-	 * <li>statut</li>
+	 * <li>status</li>
 	 * <li>dateCreation</li>
 	 * </ul>
 	 * @param ascending true for ascending, false for descending
@@ -103,7 +103,7 @@ public class ProjetEducatifSetCollection extends org.orm.util.ORMSet {
 	}
 	
 	protected PersistentManager getPersistentManager() throws PersistentException {
-		return Ampianaro2PersistentManager.instance();
+		return Ampianaro3PersistentManager.instance();
 	}
 	
 }

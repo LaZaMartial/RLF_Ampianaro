@@ -24,7 +24,7 @@ public class Don {
 	
 	public static Don loadDonByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadDonByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -35,7 +35,7 @@ public class Don {
 	
 	public static Don getDonByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getDonByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -46,7 +46,7 @@ public class Don {
 	
 	public static Don loadDonByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadDonByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -57,7 +57,7 @@ public class Don {
 	
 	public static Don getDonByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getDonByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -108,7 +108,7 @@ public class Don {
 	
 	public static List queryDon(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryDon(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -119,7 +119,7 @@ public class Don {
 	
 	public static List queryDon(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryDon(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -130,7 +130,7 @@ public class Don {
 	
 	public static Don[] listDonByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listDonByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -141,7 +141,7 @@ public class Don {
 	
 	public static Don[] listDonByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listDonByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -207,7 +207,7 @@ public class Don {
 	
 	public static Don loadDonByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadDonByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -218,7 +218,7 @@ public class Don {
 	
 	public static Don loadDonByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadDonByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -245,7 +245,7 @@ public class Don {
 	
 	public static java.util.Iterator iterateDonByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateDonByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -256,7 +256,7 @@ public class Don {
 	
 	public static java.util.Iterator iterateDonByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateDonByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -316,7 +316,7 @@ public class Don {
 	
 	public boolean save() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().saveObject(this);
+			Ampianaro3PersistentManager.instance().saveObject(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -327,7 +327,7 @@ public class Don {
 	
 	public boolean delete() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().deleteObject(this);
+			Ampianaro3PersistentManager.instance().deleteObject(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -338,7 +338,7 @@ public class Don {
 	
 	public boolean refresh() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().getSession().refresh(this);
+			Ampianaro3PersistentManager.instance().getSession().refresh(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -349,7 +349,7 @@ public class Don {
 	
 	public boolean evict() throws PersistentException {
 		try {
-			Ampianaro2PersistentManager.instance().getSession().evict(this);
+			Ampianaro3PersistentManager.instance().getSession().evict(this);
 			return true;
 		}
 		catch (Exception e) {
@@ -360,12 +360,12 @@ public class Don {
 	
 	public boolean deleteAndDissociate()throws PersistentException {
 		try {
-			if(getDonateur() != null) {
-				getDonateur().dons.remove(this);
-			}
-			
 			if(getProjetEducatif() != null) {
 				getProjetEducatif().dons.remove(this);
+			}
+			
+			if(getDonateur() != null) {
+				getDonateur().dons.remove(this);
 			}
 			
 			return delete();
@@ -378,12 +378,12 @@ public class Don {
 	
 	public boolean deleteAndDissociate(org.orm.PersistentSession session)throws PersistentException {
 		try {
-			if(getDonateur() != null) {
-				getDonateur().dons.remove(this);
-			}
-			
 			if(getProjetEducatif() != null) {
 				getProjetEducatif().dons.remove(this);
+			}
+			
+			if(getDonateur() != null) {
+				getDonateur().dons.remove(this);
 			}
 			
 			try {
@@ -418,9 +418,9 @@ public class Don {
 	
 	private int ID;
 	
-	private class_diagram_orm.Donateur donateur;
-	
 	private class_diagram_orm.ProjetEducatif projetEducatif;
+	
+	private class_diagram_orm.Donateur donateur;
 	
 	private float montant;
 	

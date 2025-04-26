@@ -26,7 +26,7 @@ public class ProjetEducatifCriteria extends AbstractORMCriteria {
 	public final StringExpression description;
 	public final FloatExpression montantObjectif;
 	public final FloatExpression montantCollecte;
-	public final StringExpression statut;
+	public final StringExpression status;
 	public final StringExpression dateCreation;
 	public final CollectionExpression dons;
 	
@@ -39,7 +39,7 @@ public class ProjetEducatifCriteria extends AbstractORMCriteria {
 		description = new StringExpression("description", this);
 		montantObjectif = new FloatExpression("montantObjectif", this);
 		montantCollecte = new FloatExpression("montantCollecte", this);
-		statut = new StringExpression("statut", this);
+		status = new StringExpression("status", this);
 		dateCreation = new StringExpression("dateCreation", this);
 		dons = new CollectionExpression("ORM_Dons", this);
 	}
@@ -49,7 +49,7 @@ public class ProjetEducatifCriteria extends AbstractORMCriteria {
 	}
 	
 	public ProjetEducatifCriteria() throws PersistentException {
-		this(Ampianaro2PersistentManager.instance().getSession());
+		this(Ampianaro3PersistentManager.instance().getSession());
 	}
 	
 	public EleveCriteria createEleveCriteria() {

@@ -22,12 +22,14 @@ public class UtilisateurCriteria extends AbstractORMCriteria {
 	public final IntegerExpression ID;
 	public final StringExpression nom;
 	public final StringExpression email;
+	public final StringExpression motDePasse;
 	
 	public UtilisateurCriteria(Criteria criteria) {
 		super(criteria);
 		ID = new IntegerExpression("ID", this);
 		nom = new StringExpression("nom", this);
 		email = new StringExpression("email", this);
+		motDePasse = new StringExpression("motDePasse", this);
 	}
 	
 	public UtilisateurCriteria(PersistentSession session) {
@@ -35,7 +37,7 @@ public class UtilisateurCriteria extends AbstractORMCriteria {
 	}
 	
 	public UtilisateurCriteria() throws PersistentException {
-		this(Ampianaro2PersistentManager.instance().getSession());
+		this(Ampianaro3PersistentManager.instance().getSession());
 	}
 	
 	public Utilisateur uniqueUtilisateur() {

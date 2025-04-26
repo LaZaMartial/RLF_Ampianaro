@@ -21,6 +21,8 @@ public class DonateurProcessor {
 	
 	private String email;
 	
+	private String motDePasse;
+	
 	private String action="";
 	
 	public void setID(int value) {
@@ -45,6 +47,14 @@ public class DonateurProcessor {
 	
 	public String getEmail() {
 		return email == null ? "" : email;
+	}
+	
+	public void setMotDePasse(String value) {
+		this.motDePasse = value;
+	}
+	
+	public String getMotDePasse() {
+		return motDePasse == null ? "" : motDePasse;
 	}
 	
 	public String getAction() {
@@ -132,12 +142,14 @@ public class DonateurProcessor {
 	private void copyFromBean(class_diagram_orm.Donateur _donateur) {
 		setNom(_donateur.getNom());
 		setEmail(_donateur.getEmail());
+		setMotDePasse(_donateur.getMotDePasse());
 		setID(_donateur.getORMID());
 	}
 	
 	private void copyToBean(class_diagram_orm.Donateur _donateur) {
 		_donateur.setNom(getNom());
 		_donateur.setEmail(getEmail());
+		_donateur.setMotDePasse(getMotDePasse());
 	}
 	
 }

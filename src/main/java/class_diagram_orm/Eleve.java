@@ -24,7 +24,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve loadEleveByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadEleveByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -35,7 +35,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve getEleveByORMID(int ID) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getEleveByORMID(session, ID);
 		}
 		catch (Exception e) {
@@ -46,7 +46,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve loadEleveByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadEleveByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -57,7 +57,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve getEleveByORMID(int ID, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return getEleveByORMID(session, ID, lockMode);
 		}
 		catch (Exception e) {
@@ -108,7 +108,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static List queryEleve(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryEleve(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -119,7 +119,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static List queryEleve(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return queryEleve(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -130,7 +130,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve[] listEleveByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listEleveByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -141,7 +141,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve[] listEleveByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return listEleveByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -207,7 +207,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve loadEleveByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadEleveByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -218,7 +218,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static Eleve loadEleveByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return loadEleveByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {
@@ -245,7 +245,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static java.util.Iterator iterateEleveByQuery(String condition, String orderBy) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateEleveByQuery(session, condition, orderBy);
 		}
 		catch (Exception e) {
@@ -256,7 +256,7 @@ public class Eleve extends class_diagram_orm.Utilisateur {
 	
 	public static java.util.Iterator iterateEleveByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			PersistentSession session = Ampianaro2PersistentManager.instance().getSession();
+			PersistentSession session = Ampianaro3PersistentManager.instance().getSession();
 			return iterateEleveByQuery(session, condition, orderBy, lockMode);
 		}
 		catch (Exception e) {

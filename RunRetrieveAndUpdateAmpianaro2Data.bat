@@ -1,1 +1,0 @@
-@call RunSample ormsamples.RetrieveAndUpdateAmpianaro2Data

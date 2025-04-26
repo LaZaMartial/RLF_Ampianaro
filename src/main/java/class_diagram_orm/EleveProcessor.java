@@ -21,6 +21,8 @@ public class EleveProcessor {
 	
 	private String email;
 	
+	private String motDePasse;
+	
 	private String biographie;
 	
 	private String niveauScolaire;
@@ -51,6 +53,14 @@ public class EleveProcessor {
 	
 	public String getEmail() {
 		return email == null ? "" : email;
+	}
+	
+	public void setMotDePasse(String value) {
+		this.motDePasse = value;
+	}
+	
+	public String getMotDePasse() {
+		return motDePasse == null ? "" : motDePasse;
 	}
 	
 	public void setBiographie(String value) {
@@ -162,6 +172,7 @@ public class EleveProcessor {
 	private void copyFromBean(class_diagram_orm.Eleve _eleve) {
 		setNom(_eleve.getNom());
 		setEmail(_eleve.getEmail());
+		setMotDePasse(_eleve.getMotDePasse());
 		setBiographie(_eleve.getBiographie());
 		setNiveauScolaire(_eleve.getNiveauScolaire());
 		setDateNaissance(_eleve.getDateNaissance());
@@ -171,6 +182,7 @@ public class EleveProcessor {
 	private void copyToBean(class_diagram_orm.Eleve _eleve) {
 		_eleve.setNom(getNom());
 		_eleve.setEmail(getEmail());
+		_eleve.setMotDePasse(getMotDePasse());
 		_eleve.setBiographie(getBiographie());
 		_eleve.setNiveauScolaire(getNiveauScolaire());
 		_eleve.setDateNaissance(getDateNaissance());

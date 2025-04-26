@@ -20,7 +20,7 @@ License Type: Purchased-->
 		<td>Description</td>
 		<td>MontantObjectif</td>
 		<td>MontantCollecte</td>
-		<td>Statut</td>
+		<td>Status</td>
 		<td>DateCreation</td>
 		<td>Eleve</td>
 		<td></td>
@@ -45,7 +45,7 @@ for(int i = 0; i < projetEducatifs.length; i++) {
 		out.print(projetEducatifs[i].getMontantCollecte());
 		out.println("</td>");
 		out.print("<td>");
-		out.print(projetEducatifs[i].getStatut());
+		out.print(projetEducatifs[i].getStatus());
 		out.println("</td>");
 		out.print("<td>");
 		out.print(projetEducatifs[i].getDateCreation());

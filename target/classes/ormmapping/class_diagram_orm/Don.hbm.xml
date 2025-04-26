@@ -10,11 +10,11 @@ License Type: Purchased
 			<generator class="native">
 			</generator>
 		</id>
-		<many-to-one name="donateur" cascade="lock" column="IDUtilisateur" class="class_diagram_orm.Donateur" not-null="true" lazy="proxy" access="field">
+		<many-to-one name="projetEducatif" cascade="lock" column="IdProjetEducatif" class="class_diagram_orm.ProjetEducatif" not-null="true" lazy="proxy" access="field">
 		</many-to-one>
-		<many-to-one name="projetEducatif" cascade="lock" column="IDProjetEducatif" class="class_diagram_orm.ProjetEducatif" not-null="true" lazy="proxy" access="field">
+		<many-to-one name="donateur" cascade="lock" column="IdUtilisateur" class="class_diagram_orm.Donateur" not-null="true" lazy="proxy" access="field">
 		</many-to-one>
 		<property name="montant" column="Montant" type="float" not-null="true" lazy="false"/>
-		<property name="dateEnvoi" column="DateEnvoi" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="dateEnvoi" column="DateEnvoi" type="string" length="255" not-null="true" lazy="false"/>
 	</class>
 </hibernate-mapping>

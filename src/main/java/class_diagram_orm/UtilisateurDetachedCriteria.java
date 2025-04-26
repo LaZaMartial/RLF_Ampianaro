@@ -22,12 +22,14 @@ public class UtilisateurDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression ID;
 	public final StringExpression nom;
 	public final StringExpression email;
+	public final StringExpression motDePasse;
 	
 	public UtilisateurDetachedCriteria() {
 		super(class_diagram_orm.Utilisateur.class, class_diagram_orm.UtilisateurCriteria.class);
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
 		nom = new StringExpression("nom", this.getDetachedCriteria());
 		email = new StringExpression("email", this.getDetachedCriteria());
+		motDePasse = new StringExpression("motDePasse", this.getDetachedCriteria());
 	}
 	
 	public UtilisateurDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -35,6 +37,7 @@ public class UtilisateurDetachedCriteria extends AbstractORMDetachedCriteria {
 		ID = new IntegerExpression("ID", this.getDetachedCriteria());
 		nom = new StringExpression("nom", this.getDetachedCriteria());
 		email = new StringExpression("email", this.getDetachedCriteria());
+		motDePasse = new StringExpression("motDePasse", this.getDetachedCriteria());
 	}
 	
 	public Utilisateur uniqueUtilisateur(PersistentSession session) {

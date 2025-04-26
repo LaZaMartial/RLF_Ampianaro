@@ -21,6 +21,8 @@ public class AdministrateurProcessor {
 	
 	private String email;
 	
+	private String motDePasse;
+	
 	private String action="";
 	
 	public void setID(int value) {
@@ -45,6 +47,14 @@ public class AdministrateurProcessor {
 	
 	public String getEmail() {
 		return email == null ? "" : email;
+	}
+	
+	public void setMotDePasse(String value) {
+		this.motDePasse = value;
+	}
+	
+	public String getMotDePasse() {
+		return motDePasse == null ? "" : motDePasse;
 	}
 	
 	public String getAction() {
@@ -132,12 +142,14 @@ public class AdministrateurProcessor {
 	private void copyFromBean(class_diagram_orm.Administrateur _administrateur) {
 		setNom(_administrateur.getNom());
 		setEmail(_administrateur.getEmail());
+		setMotDePasse(_administrateur.getMotDePasse());
 		setID(_administrateur.getORMID());
 	}
 	
 	private void copyToBean(class_diagram_orm.Administrateur _administrateur) {
 		_administrateur.setNom(getNom());
 		_administrateur.setEmail(getEmail());
+		_administrateur.setMotDePasse(getMotDePasse());
 	}
 	
 }

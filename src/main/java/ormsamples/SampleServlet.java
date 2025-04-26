@@ -23,23 +23,23 @@ public class SampleServlet extends HttpServlet {
 		String action = request.getParameter("action");
 		try {
 			if (action.equals("create")) {
-				ORMDatabaseInitiator.createSchema(class_diagram_orm.Ampianaro2PersistentManager.instance());
+				ORMDatabaseInitiator.createSchema(class_diagram_orm.Ampianaro3PersistentManager.instance());
 			}
 			else if (action.equals("drop")) {
-				ORMDatabaseInitiator.dropSchema(class_diagram_orm.Ampianaro2PersistentManager.instance());
+				ORMDatabaseInitiator.dropSchema(class_diagram_orm.Ampianaro3PersistentManager.instance());
 			}
 			else {
 				if (action.equals("insert")) {
-					CreateAmpianaro2Data createAmpianaro2Data = new CreateAmpianaro2Data();
-					createAmpianaro2Data.createTestData();
+					CreateAmpianaro3Data createAmpianaro3Data = new CreateAmpianaro3Data();
+					createAmpianaro3Data.createTestData();
 				}
 				else if (action.equals("update")) {
-					RetrieveAndUpdateAmpianaro2Data retrieveAndUpdateAmpianaro2Data = new RetrieveAndUpdateAmpianaro2Data();
-					retrieveAndUpdateAmpianaro2Data.retrieveAndUpdateTestData();
+					RetrieveAndUpdateAmpianaro3Data retrieveAndUpdateAmpianaro3Data = new RetrieveAndUpdateAmpianaro3Data();
+					retrieveAndUpdateAmpianaro3Data.retrieveAndUpdateTestData();
 				}
 				else if (action.equals("delete")) {
-					DeleteAmpianaro2Data deleteAmpianaro2Data = new DeleteAmpianaro2Data();
-					deleteAmpianaro2Data.deleteTestData();
+					DeleteAmpianaro3Data deleteAmpianaro3Data = new DeleteAmpianaro3Data();
+					deleteAmpianaro3Data.deleteTestData();
 				}
 			}
 		}
@@ -51,7 +51,7 @@ public class SampleServlet extends HttpServlet {
 		//
 		//<filter>
 		//  <filter-name>ORMFilter</filter-name>
-		//	<filter-class>ormsamples.Ampianaro2Filter</filter-class>
+		//	<filter-class>ormsamples.Ampianaro3Filter</filter-class>
 		//</filter>
 		//
 		//<filter-mapping>
@@ -61,7 +61,7 @@ public class SampleServlet extends HttpServlet {
 		//
 		//***** or add the following statement at the end of each servlet that used ORM:
 		//
-		//class_diagram_orm.Ampianaro2PersistentManager.instance().getSession().close();", true);
+		//class_diagram_orm.Ampianaro3PersistentManager.instance().getSession().close();", true);
 		
 		PrintWriter lWriter = response.getWriter();
 		lWriter.println("Sample Servlet. Action = " + action);
