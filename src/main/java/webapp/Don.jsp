@@ -36,10 +36,6 @@ function listAll()  {
 			<td><input type=text name="montant" value="<jsp:getProperty name="DonBean" property="montant"/>" /></td>
 		</tr>
 		<tr>
-			<td>DateEnvoi : </td>
-			<td><input type=text name="dateEnvoi" value="<jsp:getProperty name="DonBean" property="dateEnvoi"/>" /></td>
-		</tr>
-		<tr>
 			<td>ProjetEducatifID : </td>
 			<td><input type=text name="projetEducatif_projetEducatifID" value="<jsp:getProperty name="DonBean" property="projetEducatif_projetEducatifID"/>" /></td>
 		</tr>

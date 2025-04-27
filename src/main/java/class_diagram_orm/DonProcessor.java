@@ -21,6 +21,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import class_diagram_orm.Utilisateur;
 
+import java.time.LocalDate;
+
 public class DonProcessor {
 	private int ID;
 
@@ -181,7 +183,7 @@ public class DonProcessor {
 	private void copyToBean(class_diagram_orm.Don _don, HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		_don.setMontant(getMontant());
-		_don.setDateEnvoi(getDateEnvoi());
+		_don.setDateEnvoi(LocalDate.now().toString());
 		try  {
 			HttpSession session = request.getSession(false);
 			if (session != null) {

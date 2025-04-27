@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import class_diagram_orm.Utilisateur;
+import java.time.LocalDate;
 
 public class ProjetEducatifProcessor {
 	private int ID;
@@ -208,9 +209,9 @@ public class ProjetEducatifProcessor {
 		_projetEducatif.setTitre(getTitre());
 		_projetEducatif.setDescription(getDescription());
 		_projetEducatif.setMontantObjectif(getMontantObjectif());
-		_projetEducatif.setMontantCollecte(getMontantCollecte());
-		_projetEducatif.setStatus(getStatus());
-		_projetEducatif.setDateCreation(getDateCreation());
+		_projetEducatif.setMontantCollecte(0);
+		_projetEducatif.setStatus("En cours");
+		_projetEducatif.setDateCreation(LocalDate.now().toString());
 		try  {
 			HttpSession session = request.getSession(false);
 			if (session != null) {

@@ -43,18 +43,6 @@ function listAll()  {
 			<td>MontantObjectif : </td>
 			<td><input type=text name="montantObjectif" value="<jsp:getProperty name="ProjetEducatifBean" property="montantObjectif"/>" /></td>
 		</tr>
-		<tr>
-			<td>MontantCollecte : </td>
-			<td><input type=text name="montantCollecte" value="<jsp:getProperty name="ProjetEducatifBean" property="montantCollecte"/>" /></td>
-		</tr>
-		<tr>
-			<td>Status : </td>
-			<td><input type=text name="status" value="<jsp:getProperty name="ProjetEducatifBean" property="status"/>" /></td>
-		</tr>
-		<tr>
-			<td>DateCreation : </td>
-			<td><input type=text name="dateCreation" value="<jsp:getProperty name="ProjetEducatifBean" property="dateCreation"/>" /></td>
-		</tr>
 	</table>
 	<INPUT type="hidden" name="action" value="">
 	<hr>
