@@ -1,7 +1,6 @@
 package class_diagram_orm;
 
 import class_diagram_orm.Utilisateur;
-import class_diagram_orm.UtilisateurDAO;
 import org.orm.PersistentException;
 
 import javax.servlet.ServletException;
@@ -17,7 +16,7 @@ public class LoginServlet extends HttpServlet{
         String motDePasse = request.getParameter("motdepasse");
 
         try {
-            List<Utilisateur> utilisateurs = UtilisateurDAO.getAll();
+            List<Utilisateur> utilisateurs = Utilisateur.queryUtilisateur(null, null);
             boolean authenticated = false;
             Utilisateur currentUser = null;
 
