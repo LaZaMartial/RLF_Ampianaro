@@ -10,7 +10,7 @@ License Type: Purchased-->
 <html>
 <jsp:useBean id="DonBean" scope="page" class="class_diagram_orm.DonProcessor" />
 <jsp:setProperty name="DonBean" property="*" />
-<% String result = DonBean.process(); %>
+<% String result = DonBean.process(request, response); %>
 
 <script language="javascript">
 <!--
@@ -38,10 +38,6 @@ function listAll()  {
 		<tr>
 			<td>DateEnvoi : </td>
 			<td><input type=text name="dateEnvoi" value="<jsp:getProperty name="DonBean" property="dateEnvoi"/>" /></td>
-		</tr>
-		<tr>
-			<td>DonateurID : </td>
-			<td><input type=text name="donateur_donateurID" value="<jsp:getProperty name="DonBean" property="donateur_donateurID"/>" /></td>
 		</tr>
 		<tr>
 			<td>ProjetEducatifID : </td>
