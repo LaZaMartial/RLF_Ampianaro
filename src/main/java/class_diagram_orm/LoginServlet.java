@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet{
                 session.setAttribute("user", currentUser);
 
                 if (currentUser instanceof Administrateur) {
-                    response.sendRedirect("AdministrateurList.jsp");  // page pour l'admin
+                    response.sendRedirect("ProjetEducatifApprovalList.jsp");  // page pour l'admin
                 } else if (currentUser instanceof Donateur) {
                     response.sendRedirect("DonList.jsp");  // page pour le donateur
                 } else if (currentUser instanceof Eleve) {

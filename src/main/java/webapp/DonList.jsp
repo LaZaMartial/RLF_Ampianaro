@@ -20,7 +20,6 @@ License Type: Purchased-->
 		<td>DateEnvoi</td>
 		<td>Donateur</td>
 		<td>ProjetEducatif</td>
-		<td></td>
 	</tr>
 <%
 class_diagram_orm.Don[] dons = class_diagram_orm.Don.listDonByQuery(null, null);
@@ -68,16 +67,6 @@ out.println("<td></td>");
  {
 out.println("<td></td>");
 		}
-		
-		out.print("<td>");
-		out.print("<a href=\"Don.jsp?action=search&ID=");
-		out.print(dons[i].getORMID());
-		out.print("\">");
-		out.print("Edit");
-		out.print("</a>");
-		out.print("</td>");
-		out.println("</td>");
-		out.println("</tr>");
 }
 
 %>

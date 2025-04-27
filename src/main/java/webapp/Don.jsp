@@ -11,6 +11,15 @@ License Type: Purchased-->
 <jsp:useBean id="DonBean" scope="page" class="class_diagram_orm.DonProcessor" />
 <jsp:setProperty name="DonBean" property="*" />
 <% String result = DonBean.process(request, response); %>
+<%
+    java.util.List<class_diagram_orm.ProjetEducatif> projets = null;
+    try {
+        projets = class_diagram_orm.ProjetEducatif.queryProjetEducatif(null, null);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+%>
+
 
 <script language="javascript">
 <!--
@@ -36,18 +45,24 @@ function listAll()  {
 			<td><input type=text name="montant" value="<jsp:getProperty name="DonBean" property="montant"/>" /></td>
 		</tr>
 		<tr>
-			<td>ProjetEducatifID : </td>
-			<td><input type=text name="projetEducatif_projetEducatifID" value="<jsp:getProperty name="DonBean" property="projetEducatif_projetEducatifID"/>" /></td>
+			<td>ProjetEducatif   : </td>
+			<td>
+                <select name="projetEducatif_projetEducatifID">
+                  <option value="">-- Choisir un projet --</option>
+                  <% if (projets != null) {
+                       for (class_diagram_orm.ProjetEducatif projet : projets) { %>
+                         <option value="<%= projet.getORMID() %>"><%= projet.getTitre() %></option>
+                  <%   }
+                     }
+                  %>
+                </select>
+              </td>
 		</tr>
 	</table>
 	<INPUT type="hidden" name="action" value="">
 	<hr>
 	<INPUT type="button" value="List All" onclick="return listAll();">
-	<INPUT type="button" value="Search" onclick="return perform('search');">
 	<INPUT type="button" value="Insert" onclick="return perform('insert');">
-	<INPUT type="button" value="Update" onclick="return perform('update');">
-	<INPUT type="button" value="Delete" onclick="return perform('delete');">
-	<INPUT type="reset">
 </form>
 <hr>
 <h3><b>Result :</b><%=result%></h3>

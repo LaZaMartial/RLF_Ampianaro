@@ -1,11 +1,11 @@
 <!-- "Visual Paradigm: DO NOT MODIFY THIS FILE!"
 
-This is an automatic generated file. It will be regenerated every time 
+This is an automatic generated file. It will be regenerated every time
 you generate persistence class.
 
 Modifying its content may cause the program not work, or your work may lost.-->
 
-<!-- Licensee: 
+<!-- Licensee:
 License Type: Purchased-->
 <html>
 <head><title>ProjetEducatif List</title>
@@ -50,7 +50,7 @@ for(int i = 0; i < projetEducatifs.length; i++) {
 		out.print("<td>");
 		out.print(projetEducatifs[i].getDateCreation());
 		out.println("</td>");
-		
+
 		class_diagram_orm.Eleve eleve = projetEducatifs[i].getEleve();
 		if(eleve != null) {
 			out.print("<td>");
@@ -61,17 +61,17 @@ for(int i = 0; i < projetEducatifs.length; i++) {
 			out.print("</a>");
 			out.println("</td>");
 		}
-		
+
 		else
  {
 out.println("<td></td>");
 		}
-		
+
 		out.print("<td>");
-		out.print("<a href=\"ProjetEducatifEdit.jsp?action=search&ID=");
+		out.print("<a href=\"ProjetEducatifApproval.jsp?action=search&ID=");
 		out.print(projetEducatifs[i].getORMID());
 		out.print("\">");
-		out.print("Edit");
+		out.print("Change Status");
 		out.print("</a>");
 		out.print("</td>");
 		out.println("</td>");
@@ -81,8 +81,10 @@ out.println("<td></td>");
 %>
 </table><br>
 <a href="index.html">Index page</a>
- | 
-<a href="ProjetEducatif.jsp">Add ProjetEducatif</a>
+ |
+<a href="EleveList.jsp">Eleve List</a>
+ |
+<a href="DonateurList.jsp">Donateur List</a>
 </center>
 </body>
 </html>

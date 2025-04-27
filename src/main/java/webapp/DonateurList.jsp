@@ -34,7 +34,7 @@ for(int i = 0; i < donateurs.length; i++) {
 		out.print(donateurs[i].getEmail());
 		out.println("</td>");
 		out.print("<td>");
-		out.print("<a href=\"Donateur.jsp?action=search&ID=");
+		out.print("<a href=\"DonateurEdit.jsp?action=search&ID=");
 		out.print(donateurs[i].getORMID());
 		out.print("\">");
 		out.print("Edit");

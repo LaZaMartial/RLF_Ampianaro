@@ -149,7 +149,7 @@ public class ProjetEducatifProcessor {
 			try {
 				class_diagram_orm.ProjetEducatif _projetEducatif= class_diagram_orm.ProjetEducatif.loadProjetEducatifByORMID(getID());
 				if (_projetEducatif != null) {
-					copyToBean(_projetEducatif, request, response);
+					copyToBeanUpdate(_projetEducatif, request, response);
 					if (_projetEducatif.save()) {
 						result = "Update success";
 					}
@@ -210,7 +210,7 @@ public class ProjetEducatifProcessor {
 		_projetEducatif.setDescription(getDescription());
 		_projetEducatif.setMontantObjectif(getMontantObjectif());
 		_projetEducatif.setMontantCollecte(0);
-		_projetEducatif.setStatus("En cours");
+		_projetEducatif.setStatus("En attente");
 		_projetEducatif.setDateCreation(LocalDate.now().toString());
 		try  {
 			HttpSession session = request.getSession(false);
@@ -235,6 +235,15 @@ public class ProjetEducatifProcessor {
 		catch (IOException e) {
 		}
 		
+	}
+
+	private void copyToBeanUpdate(class_diagram_orm.ProjetEducatif _projetEducatif, HttpServletRequest request, HttpServletResponse response) throws PersistentException {
+		_projetEducatif.setTitre(getTitre());
+		_projetEducatif.setDescription(getDescription());
+		_projetEducatif.setMontantObjectif(getMontantObjectif());
+		_projetEducatif.setMontantCollecte(getMontantCollecte());
+		_projetEducatif.setStatus(getStatus());
+		_projetEducatif.setDateCreation(LocalDate.now().toString());
 	}
 	
 }

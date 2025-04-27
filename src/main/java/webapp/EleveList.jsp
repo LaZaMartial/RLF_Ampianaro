@@ -46,7 +46,7 @@ for(int i = 0; i < eleves.length; i++) {
 		out.print(eleves[i].getEmail());
 		out.println("</td>");
 		out.print("<td>");
-		out.print("<a href=\"Eleve.jsp?action=search&ID=");
+		out.print("<a href=\"EleveEdit.jsp?action=search&ID=");
 		out.print(eleves[i].getORMID());
 		out.print("\">");
 		out.print("Edit");
