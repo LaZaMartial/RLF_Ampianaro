@@ -14,6 +14,13 @@
 package class_diagram_orm;
 
 import org.orm.PersistentException;
+
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import class_diagram_orm.Utilisateur;
+
 public class ProjetEducatifProcessor {
 	private int ID;
 	
@@ -105,7 +112,7 @@ public class ProjetEducatifProcessor {
 		return eleve_eleveID;
 	}
 	
-	public String process() {
+	public String process(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String result = "Unexcepted result";
 		if (action.equals("search")) {
 			try {
@@ -125,7 +132,7 @@ public class ProjetEducatifProcessor {
 		else if(action.equals("insert"))  {
 			try {
 				class_diagram_orm.ProjetEducatif _projetEducatif = class_diagram_orm.ProjetEducatif.createProjetEducatif();
-				copyToBean(_projetEducatif);
+				copyToBean(_projetEducatif, request, response);
 				if (_projetEducatif.save()) {
 					result = "Insert success";
 				}
@@ -141,7 +148,7 @@ public class ProjetEducatifProcessor {
 			try {
 				class_diagram_orm.ProjetEducatif _projetEducatif= class_diagram_orm.ProjetEducatif.loadProjetEducatifByORMID(getID());
 				if (_projetEducatif != null) {
-					copyToBean(_projetEducatif);
+					copyToBean(_projetEducatif, request, response);
 					if (_projetEducatif.save()) {
 						result = "Update success";
 					}
@@ -197,7 +204,7 @@ public class ProjetEducatifProcessor {
 		
 	}
 	
-	private void copyToBean(class_diagram_orm.ProjetEducatif _projetEducatif) {
+	private void copyToBean(class_diagram_orm.ProjetEducatif _projetEducatif, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		_projetEducatif.setTitre(getTitre());
 		_projetEducatif.setDescription(getDescription());
 		_projetEducatif.setMontantObjectif(getMontantObjectif());
@@ -205,10 +212,26 @@ public class ProjetEducatifProcessor {
 		_projetEducatif.setStatus(getStatus());
 		_projetEducatif.setDateCreation(getDateCreation());
 		try  {
-			class_diagram_orm.Eleve _eleve = class_diagram_orm.Eleve.loadEleveByORMID(getEleve_eleveID());
-			_projetEducatif.setEleve(_eleve);
+			HttpSession session = request.getSession(false);
+			if (session != null) {
+				Utilisateur user = (Utilisateur) session.getAttribute("user");;
+				System.out.println(user);
+				if (user != null) {
+					try {
+						Eleve eleveFromDB = Eleve.loadEleveByORMID(user.getORMID());
+						_projetEducatif.setEleve(eleveFromDB);
+					} catch (PersistentException e) {
+						e.printStackTrace();  // À remplacer par une vraie gestion d'erreur plus tard
+						response.sendRedirect("Login.jsp"); // Si on n'arrive pas à recharger, retour login
+					}
+				} else {
+					response.sendRedirect("Login.jsp"); // Pas connecté
+				}
+			} else {
+				response.sendRedirect("Login.jsp"); // Pas de session, donc pas connecté
+			}
 		}
-		catch (PersistentException e) {
+		catch (IOException e) {
 		}
 		
 	}

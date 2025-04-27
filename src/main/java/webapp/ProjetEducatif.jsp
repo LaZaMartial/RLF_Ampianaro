@@ -10,7 +10,7 @@ License Type: Purchased-->
 <html>
 <jsp:useBean id="ProjetEducatifBean" scope="page" class="class_diagram_orm.ProjetEducatifProcessor" />
 <jsp:setProperty name="ProjetEducatifBean" property="*" />
-<% String result = ProjetEducatifBean.process(); %>
+<% String result = ProjetEducatifBean.process(request, response); %>
 
 <script language="javascript">
 <!--
@@ -54,10 +54,6 @@ function listAll()  {
 		<tr>
 			<td>DateCreation : </td>
 			<td><input type=text name="dateCreation" value="<jsp:getProperty name="ProjetEducatifBean" property="dateCreation"/>" /></td>
-		</tr>
-		<tr>
-			<td>EleveID : </td>
-			<td><input type=text name="eleve_eleveID" value="<jsp:getProperty name="ProjetEducatifBean" property="eleve_eleveID"/>" /></td>
 		</tr>
 	</table>
 	<INPUT type="hidden" name="action" value="">
