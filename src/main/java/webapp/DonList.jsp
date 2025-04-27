@@ -11,6 +11,7 @@ License Type: Purchased-->
 <head><title>Don List</title>
 </head>
 <body>
+<tr><td><a href="logout">Deconnexion</a></td></tr>
 <center>
 <h1>Don List</h1>
 <table border="1" width="80%">

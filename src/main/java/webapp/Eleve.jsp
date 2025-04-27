@@ -28,6 +28,7 @@ function listAll()  {
 <head><title>Eleve</title>
 </head>
 <body>
+<tr><td><a href="logout">Deconnexion</a></td></tr>
 <h1>Eleve</h1>
 <form method="POST" name="form1" action=Eleve.jsp>
 	<table>

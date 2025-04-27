@@ -28,6 +28,7 @@ function listAll()  {
 <head><title>DonateurEdit</title>
 </head>
 <body>
+<tr><td><a href="logout">Deconnexion</a></td></tr>
 <h1>Donateur</h1>
 <form method="POST" name="form1" action=DonateurEdit.jsp>
 	<table>

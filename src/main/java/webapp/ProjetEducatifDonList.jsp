@@ -1,17 +1,13 @@
 <!-- "Visual Paradigm: DO NOT MODIFY THIS FILE!"
 
-This is an automatic generated file. It will be regenerated every time 
+This is an automatic generated file. It will be regenerated every time
 you generate persistence class.
 
 Modifying its content may cause the program not work, or your work may lost.-->
 
-<!-- Licensee: 
+<!-- Licensee:
 License Type: Purchased-->
-<%@ page import="class_diagram_orm.Utilisateur" %>
 <html>
-<%
-    Utilisateur user =(Utilisateur) session.getAttribute("user");
-%>
 <head><title>ProjetEducatif List</title>
 </head>
 <body>
@@ -27,12 +23,13 @@ License Type: Purchased-->
 		<td>MontantCollecte</td>
 		<td>Status</td>
 		<td>DateCreation</td>
+		<td>Eleve</td>
 		<td></td>
 	</tr>
 <%
 class_diagram_orm.ProjetEducatif[] projetEducatifs = class_diagram_orm.ProjetEducatif.listProjetEducatifByQuery(null, null);
 for(int i = 0; i < projetEducatifs.length; i++) {
-        if (projetEducatifs[i].getEleve() == null || projetEducatifs[i].getEleve().getORMID() != user.getORMID()) {
+        if (!"En cours".equalsIgnoreCase(projetEducatifs[i].getStatus())) {
             continue; // Sauter les projets non "En cours"
         }
 		out.print("<tr>");
@@ -57,12 +54,28 @@ for(int i = 0; i < projetEducatifs.length; i++) {
 		out.print("<td>");
 		out.print(projetEducatifs[i].getDateCreation());
 		out.println("</td>");
-		
+
+		class_diagram_orm.Eleve eleve = projetEducatifs[i].getEleve();
+		if(eleve != null) {
+			out.print("<td>");
+			out.print("<a href=\"Eleve.jsp?action=search&ID=");
+			out.print(eleve.getORMID());
+			out.print("\">");
+			out.print(eleve.getNom());
+			out.print("</a>");
+			out.println("</td>");
+		}
+
+		else
+ {
+out.println("<td></td>");
+		}
+
 		out.print("<td>");
-		out.print("<a href=\"ProjetEducatifEdit.jsp?action=search&ID=");
+		out.print("<a href=\"ProjetEducatifDon.jsp?ID=");
 		out.print(projetEducatifs[i].getORMID());
 		out.print("\">");
-		out.print("Edit");
+		out.print("Faire Don");
 		out.print("</a>");
 		out.print("</td>");
 		out.println("</td>");
@@ -72,8 +85,8 @@ for(int i = 0; i < projetEducatifs.length; i++) {
 %>
 </table><br>
 <a href="index.html">Index page</a>
- | 
-<a href="ProjetEducatif.jsp">Add ProjetEducatif</a>
+ |
+<a href="Don.jsp">Add Don</a>
 </center>
 </body>
 </html>

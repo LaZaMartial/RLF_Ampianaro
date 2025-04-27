@@ -11,8 +11,10 @@ License Type: Purchased-->
 <head><title>Administrateur List</title>
 </head>
 <body>
+<tr><td><a href="logout">Deconnexion</a></td></tr>
 <center>
 <h1>Administrateur List</h1>
+    <tr><td><a href="logout">Deconnexion</a></td></tr>
 <table border="1" width="80%">
 	<tr>
 		<td>ID</td>

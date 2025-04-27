@@ -11,6 +11,7 @@ License Type: Purchased-->
 <head><title>ProjetEducatif List</title>
 </head>
 <body>
+<tr><td><a href="logout">Deconnexion</a></td></tr>
 <center>
 <h1>ProjetEducatif List</h1>
 <table border="1" width="80%">

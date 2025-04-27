@@ -28,6 +28,7 @@ function listAll()  {
 <head><title>Administrateur</title>
 </head>
 <body>
+<tr><td><a href="logout">Deconnexion</a></td></tr>
 <h1>Administrateur</h1>
 <form method="POST" name="form1" action=Administrateur.jsp>
 	<table>

@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet{
                 if (currentUser instanceof Administrateur) {
                     response.sendRedirect("ProjetEducatifApprovalList.jsp");  // page pour l'admin
                 } else if (currentUser instanceof Donateur) {
-                    response.sendRedirect("DonList.jsp");  // page pour le donateur
+                    response.sendRedirect("ProjetEducatifDonList.jsp");  // page pour le donateur
                 } else if (currentUser instanceof Eleve) {
                     response.sendRedirect("ProjetEducatifList.jsp");  // page pour l'élève
                 } else {
