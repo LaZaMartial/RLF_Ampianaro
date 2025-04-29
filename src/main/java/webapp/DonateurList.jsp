@@ -1,55 +1,53 @@
-<!-- "Visual Paradigm: DO NOT MODIFY THIS FILE!"
-
-This is an automatic generated file. It will be regenerated every time 
-you generate persistence class.
-
-Modifying its content may cause the program not work, or your work may lost.-->
-
-<!-- Licensee: 
-License Type: Purchased-->
-<html>
-<head><title>Donateur List</title>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des Donateurs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<tr><td><a href="logout">Deconnexion</a></td></tr>
-<center>
-<h1>Donateur List</h1>
-<table border="1" width="80%">
-	<tr>
-		<td>ID</td>
-		<td>Nom</td>
-		<td>Email</td>
-		<td></td>
-	</tr>
-<%
-class_diagram_orm.Donateur[] donateurs = class_diagram_orm.Donateur.listDonateurByQuery(null, null);
-for(int i = 0; i < donateurs.length; i++) {
-		out.print("<tr>");
-		out.print("<td>");
-		out.print(donateurs[i].getORMID());
-		out.print("</td>");
-		out.print("<td>");
-		out.print(donateurs[i].getNom());
-		out.println("</td>");
-		out.print("<td>");
-		out.print(donateurs[i].getEmail());
-		out.println("</td>");
-		out.print("<td>");
-		out.print("<a href=\"DonateurEdit.jsp?action=search&ID=");
-		out.print(donateurs[i].getORMID());
-		out.print("\">");
-		out.print("Edit");
-		out.print("</a>");
-		out.print("</td>");
-		out.println("</td>");
-		out.println("</tr>");
-}
+<body class="bg-gray-100 min-h-screen p-6">
 
-%>
-</table><br>
-<a href="index.html">Index page</a>
- | 
-<a href="Donateur.jsp">Add Donateur</a>
-</center>
+  <div class="flex justify-end mb-6">
+    <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>
+  </div>
+
+  <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h1 class="text-2xl font-bold text-center mb-8 text-gray-800">Liste des Donateurs</h1>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200 text-gray-700">
+            <th class="py-3 px-4 border">ID</th>
+            <th class="py-3 px-4 border">Nom</th>
+            <th class="py-3 px-4 border">Email</th>
+            <th class="py-3 px-4 border">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%
+            class_diagram_orm.Donateur[] donateurs = class_diagram_orm.Donateur.listDonateurByQuery(null, null);
+            for (int i = 0; i < donateurs.length; i++) {
+          %>
+          <tr class="text-center hover:bg-gray-50">
+            <td class="py-2 px-4 border"><%= donateurs[i].getORMID() %></td>
+            <td class="py-2 px-4 border"><%= donateurs[i].getNom() %></td>
+            <td class="py-2 px-4 border"><%= donateurs[i].getEmail() %></td>
+            <td class="py-2 px-4 border">
+              <a href="DonateurEdit.jsp?action=search&ID=<%= donateurs[i].getORMID() %>" class="text-indigo-500 hover:underline font-semibold">Modifier</a>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flex justify-center mt-8">
+      <a href="Donateur.jsp" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
+        Ajouter un Donateur
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>

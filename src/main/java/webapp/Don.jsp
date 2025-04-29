@@ -1,71 +1,106 @@
-<!-- "Visual Paradigm: DO NOT MODIFY THIS FILE!"
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Don</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-This is an automatic generated file. It will be regenerated every time 
-you generate persistence class.
-
-Modifying its content may cause the program not work, or your work may lost.-->
-
-<!-- Licensee: 
-License Type: Purchased-->
-<html>
-<jsp:useBean id="DonBean" scope="page" class="class_diagram_orm.DonProcessor" />
-<jsp:setProperty name="DonBean" property="*" />
-<% String result = DonBean.process(request, response); %>
-<%
-    java.util.List<class_diagram_orm.ProjetEducatif> projets = null;
-    try {
-        projets = class_diagram_orm.ProjetEducatif.queryProjetEducatif(null, null);
-    } catch (Exception e) {
-        e.printStackTrace();
+  <script type="text/javascript">
+    function perform(command) {
+      document.form1.action.value = command;
+      document.form1.submit();
+      return true;
     }
-%>
-
-
-<script language="javascript">
-<!--
-function perform(command)  {
-		form1.action.value = command;
-		form1.submit();
-		return true;
-	}
-function listAll()  {
-		window.location.href = 'ProjetEducatifDonList.jsp';
-		return true;
-	}
-// -->
-</script>
-<head><title>Don</title>
-    <tr><td><a href="logout">Deconnexion</a></td></tr>
+    function listAll() {
+      window.location.href = 'ProjetEducatifDonList.jsp';
+      return true;
+    }
+  </script>
 </head>
-<body>
-<h1>Don</h1>
-<form method="POST" name="form1" action=Don.jsp>
-	<table>
-		<tr>
-			<td>Montant : </td>
-			<td><input type=text name="montant" value="<jsp:getProperty name="DonBean" property="montant"/>" /></td>
-		</tr>
-		<tr>
-			<td>ProjetEducatif   : </td>
-			<td>
-                <select name="projetEducatif_projetEducatifID">
-                  <option value="">-- Choisir un projet --</option>
-                  <% if (projets != null) {
-                       for (class_diagram_orm.ProjetEducatif projet : projets) { %>
-                         <option value="<%= projet.getORMID() %>"><%= projet.getTitre() %></option>
-                  <%   }
-                     }
-                  %>
-                </select>
-              </td>
-		</tr>
-	</table>
-	<INPUT type="hidden" name="action" value="">
-	<hr>
-	<INPUT type="button" value="List All" onclick="return listAll();">
-	<INPUT type="button" value="Insert" onclick="return perform('insert');">
-</form>
-<hr>
-<h3><b>Result :</b><%=result%></h3>
+
+<body class="bg-gray-100 min-h-screen p-6">
+
+  <div class="flex justify-end mb-6">
+    <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>
+  </div>
+
+  <div class="max-w-2xl mx-auto bg-white p-8 shadow-md rounded-lg">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Faire un Don</h1>
+
+    <jsp:useBean id="DonBean" scope="page" class="class_diagram_orm.DonProcessor" />
+    <jsp:setProperty name="DonBean" property="*" />
+    <%
+      String result = DonBean.process(request, response);
+      java.util.List<class_diagram_orm.ProjetEducatif> projets = null;
+      try {
+        projets = class_diagram_orm.ProjetEducatif.queryProjetEducatif(null, null);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    %>
+
+    <form method="POST" name="form1" action="Don.jsp" class="space-y-6">
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="montant">Montant :</label>
+        <input
+          type="text"
+          id="montant"
+          name="montant"
+          value="<jsp:getProperty name='DonBean' property='montant'/>"
+          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          required
+        />
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="projetEducatif_projetEducatifID">Projet Educatif :</label>
+        <select
+          id="projetEducatif_projetEducatifID"
+          name="projetEducatif_projetEducatifID"
+          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          required
+        >
+          <option value="">-- Choisir un projet --</option>
+          <% if (projets != null) {
+               for (class_diagram_orm.ProjetEducatif projet : projets) { %>
+                 <option value="<%= projet.getORMID() %>"><%= projet.getTitre() %></option>
+          <%   }
+             }
+          %>
+        </select>
+      </div>
+
+      <input type="hidden" name="action" value="">
+
+      <div class="flex justify-center gap-4 pt-6">
+        <button
+          type="button"
+          onclick="return listAll();"
+          class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded"
+        >
+          Voir Tout
+        </button>
+
+        <button
+          type="button"
+          onclick="return perform('insert');"
+          class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded"
+        >
+          Inserer
+        </button>
+      </div>
+    </form>
+
+    <hr class="my-8">
+
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Resultat :</h3>
+      <p class="text-gray-600"><%= result %></p>
+    </div>
+  </div>
+
 </body>
 </html>

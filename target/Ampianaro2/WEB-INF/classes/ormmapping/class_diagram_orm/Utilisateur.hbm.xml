@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Purchased
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="class_diagram_orm.Utilisateur" table="Utilisateur" lazy="false">
+		<id name="ID" column="IdUtilisateur" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="nom" column="Nom" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="email" column="Email" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="motDePasse" column="MotDePasse" type="string" length="255" not-null="false" lazy="false"/>
+		<joined-subclass name="class_diagram_orm.Donateur" table="Donateur" lazy="false">
+			<key>
+				<column name="IdUtilisateur"/>
+			</key>
+			<set name="ORM_Dons" lazy="true" cascade="all-delete-orphan" inverse="true">
+				<key column="IdUtilisateur" not-null="true"/>
+				<one-to-many class="class_diagram_orm.Don"/>
+			</set>
+		</joined-subclass>
+		<joined-subclass name="class_diagram_orm.Eleve" table="Eleve" lazy="false">
+			<key>
+				<column name="IdUtilisateur"/>
+			</key>
+			<property name="biographie" column="Biographie" type="string" length="255" not-null="false" lazy="false"/>
+			<property name="niveauScolaire" column="NiveauScolaire" type="string" length="255" not-null="false" lazy="false"/>
+			<property name="dateNaissance" column="DateNaissance" type="string" length="255" not-null="false" lazy="false"/>
+			<set name="ORM_ProjetEducatifs" lazy="true" cascade="all-delete-orphan" inverse="true">
+				<key column="IdUtilisateur" not-null="true"/>
+				<one-to-many class="class_diagram_orm.ProjetEducatif"/>
+			</set>
+		</joined-subclass>
+		<joined-subclass name="class_diagram_orm.Administrateur" table="Administrateur" lazy="false">
+			<key>
+				<column name="IdUtilisateur"/>
+			</key>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

@@ -46,8 +46,6 @@ for(int i = 0; i < utilisateurs.length; i++) {
 
 %>
 </table><br>
-<a href="index.html">Index page</a>
- | 
 <a href="Utilisateur.jsp">Add Utilisateur</a>
 </center>
 </body>

@@ -17,7 +17,7 @@ License Type: Purchased
 			<key>
 				<column name="IdUtilisateur"/>
 			</key>
-			<set name="ORM_Dons" lazy="true" cascade="save-update,lock" inverse="true">
+			<set name="ORM_Dons" lazy="true" cascade="all-delete-orphan" inverse="true">
 				<key column="IdUtilisateur" not-null="true"/>
 				<one-to-many class="class_diagram_orm.Don"/>
 			</set>
@@ -29,7 +29,7 @@ License Type: Purchased
 			<property name="biographie" column="Biographie" type="string" length="255" not-null="false" lazy="false"/>
 			<property name="niveauScolaire" column="NiveauScolaire" type="string" length="255" not-null="false" lazy="false"/>
 			<property name="dateNaissance" column="DateNaissance" type="string" length="255" not-null="false" lazy="false"/>
-			<set name="ORM_ProjetEducatifs" lazy="true" cascade="save-update,lock" inverse="true">
+			<set name="ORM_ProjetEducatifs" lazy="true" cascade="all-delete-orphan" inverse="true">
 				<key column="IdUtilisateur" not-null="true"/>
 				<one-to-many class="class_diagram_orm.ProjetEducatif"/>
 			</set>

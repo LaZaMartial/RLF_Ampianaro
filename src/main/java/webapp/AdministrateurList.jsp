@@ -48,8 +48,6 @@ for(int i = 0; i < administrateurs.length; i++) {
 
 %>
 </table><br>
-<a href="index.html">Index page</a>
- | 
 <a href="Administrateur.jsp">Add Administrateur</a>
 </center>
 </body>

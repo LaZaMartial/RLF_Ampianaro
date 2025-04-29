@@ -16,6 +16,9 @@ package class_diagram_orm;
 import org.orm.*;
 import org.hibernate.Query;
 import org.hibernate.LockMode;
+
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 public class Donateur extends class_diagram_orm.Utilisateur {
@@ -371,7 +374,7 @@ public class Donateur extends class_diagram_orm.Utilisateur {
 	private java.util.Set getORM_Dons() {
 		return ORM_dons;
 	}
-	
+
 	public final class_diagram_orm.DonSetCollection dons = new class_diagram_orm.DonSetCollection(this, _ormAdapter, ORMConstants.KEY_DONATEUR_DONS, ORMConstants.KEY_DON_DONATEUR, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {

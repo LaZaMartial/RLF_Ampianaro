@@ -72,8 +72,6 @@ out.println("<td></td>");
 
 %>
 </table><br>
-<a href="index.html">Index page</a>
- | 
 <a href="Don.jsp">Add Don</a>
 </center>
 </body>

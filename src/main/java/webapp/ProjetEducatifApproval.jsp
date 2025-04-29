@@ -1,71 +1,95 @@
-<!-- "Visual Paradigm: DO NOT MODIFY THIS FILE!"
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Educatif Approval</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-This is an automatic generated file. It will be regenerated every time
-you generate persistence class.
-
-Modifying its content may cause the program not work, or your work may lost.-->
-
-<!-- Licensee:
-License Type: Purchased-->
-<html>
 <jsp:useBean id="ProjetEducatifBean" scope="page" class="class_diagram_orm.ProjetEducatifProcessor" />
 <jsp:setProperty name="ProjetEducatifBean" property="*" />
 <% String result = ProjetEducatifBean.process(request, response); %>
 
-<script language="javascript">
-<!--
-function perform(command)  {
-		form1.action.value = command;
-		form1.submit();
-		return true;
-	}
-function listAll()  {
-		window.location.href = 'ProjetEducatifApprovalList.jsp';
-		return true;
-	}
-// -->
+<script>
+function perform(command) {
+  form1.action.value = command;
+  form1.submit();
+  return true;
+}
+function listAll() {
+  window.location.href = 'ProjetEducatifApprovalList.jsp';
+  return true;
+}
 </script>
-<head><title>ProjetEducatifApproval</title>
-</head>
-<body>
-<tr><td><a href="logout">Deconnexion</a></td></tr>
-<h1>ProjetEducatifApproval</h1>
-<form method="POST" name="form1" action=ProjetEducatifApproval.jsp>
-	<table>
-	    <tr>
-            <td>ID : </td>
-            <td><input type=text name="ID" value="<jsp:getProperty name="ProjetEducatifBean" property="ID"/>" readonly/></td>
-        </tr>
-		<tr>
-			<td>Titre : </td>
-			<td><input type=text name="titre" value="<jsp:getProperty name="ProjetEducatifBean" property="titre"/>" readonly/></td>
-		</tr>
-		<tr>
-			<td>Description : </td>
-			<td><input type=text name="description" value="<jsp:getProperty name="ProjetEducatifBean" property="description"/>" readonly/></td>
-		</tr>
-		<tr>
-			<td>MontantObjectif : </td>
-			<td><input type=text name="montantObjectif" value="<jsp:getProperty name="ProjetEducatifBean" property="montantObjectif"/>" readonly/></td>
-		</tr>
-		<tr>
-		    <td>Status : </td>
-                <td>
-                    <select name="status">
-                        <option value="En attente" <%= "En attente".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>En attente</option>
-                        <option value="En cours" <%= "En cours".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>En cours</option>
-                        <option value="Suspendu" <%= "Suspendu".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>Suspendu</option>
-                        <option value="Atteint" <%= "Atteint".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>Atteint</option>
-                    </select>
-                </td>
-		</tr>
-</table>
-	<INPUT type="hidden" name="action" value="">
-	<hr>
-	<INPUT type="button" value="List All" onclick="return listAll();">
-	<INPUT type="button" value="Update" onclick="return perform('update');">
-</form>
-<hr>
-<h3><b>Result :</b><%=result%></h3>
+
+<body class="bg-gray-100 min-h-screen p-6">
+
+  <div class="flex justify-end mb-6">
+    <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>
+  </div>
+
+  <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Approval Projet Educatif</h1>
+
+    <form method="POST" name="form1" action="ProjetEducatifApproval.jsp" class="space-y-6">
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="ID">ID :</label>
+        <input type="text" id="ID" name="ID" value="<jsp:getProperty name='ProjetEducatifBean' property='ID'/>" readonly
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre" value="<jsp:getProperty name='ProjetEducatifBean' property='titre'/>" readonly
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="description">Description :</label>
+        <input type="text" id="description" name="description" value="<jsp:getProperty name='ProjetEducatifBean' property='description'/>" readonly
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="montantObjectif">Montant Objectif :</label>
+        <input type="text" id="montantObjectif" name="montantObjectif" value="<jsp:getProperty name='ProjetEducatifBean' property='montantObjectif'/>" readonly
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold mb-2" for="status">Status :</label>
+        <select name="status" id="status" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          <option value="En attente" <%= "En attente".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>En attente</option>
+          <option value="En cours" <%= "En cours".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>En cours</option>
+          <option value="Suspendu" <%= "Suspendu".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>Suspendu</option>
+          <option value="Atteint" <%= "Atteint".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>Atteint</option>
+        </select>
+      </div>
+
+      <input type="hidden" name="action" value="">
+
+      <div class="flex justify-center gap-4 pt-6">
+        <button type="button" onclick="return listAll();"
+          class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg">
+          Voir tout
+        </button>
+        <button type="button" onclick="return perform('update');"
+          class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
+          Mettre a jour
+        </button>
+      </div>
+
+    </form>
+
+    <hr class="my-8">
+
+    <h3 class="text-center text-lg font-semibold text-gray-700">
+      Resultat : <span class="text-indigo-600"><%= result %></span>
+    </h3>
+
+  </div>
+
 </body>
 </html>
