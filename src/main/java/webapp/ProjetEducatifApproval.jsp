@@ -30,7 +30,7 @@ function listAll() {
   </div>
 
   <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-8">
-    <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Approval Projet Educatif</h1>
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Approve Projet Educatif</h1>
 
     <form method="POST" name="form1" action="ProjetEducatifApproval.jsp" class="space-y-6">
 

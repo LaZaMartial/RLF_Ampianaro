@@ -30,6 +30,7 @@
           <th class="border border-gray-300 px-4 py-2">Montant Collecte</th>
           <th class="border border-gray-300 px-4 py-2">Status</th>
           <th class="border border-gray-300 px-4 py-2">Date de Creation</th>
+          <th class="border border-gray-300 px-4 py-2">Voir Don</th>
           <th class="border border-gray-300 px-4 py-2">Actions</th>
         </tr>
       </thead>
@@ -49,6 +50,12 @@
           <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getMontantCollecte() %></td>
           <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getStatus() %></td>
           <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getDateCreation() %></td>
+          <td class="border border-gray-300 px-4 py-2">
+            <a href="DonList.jsp?ID=<%= projetEducatifs[i].getORMID() %>"
+               class="text-blue-500 hover:underline font-semibold">
+              Voir Don
+            </a>
+          </td>
           <td class="border border-gray-300 px-4 py-2">
             <a href="ProjetEducatifEdit.jsp?action=search&ID=<%= projetEducatifs[i].getORMID() %>"
                class="text-blue-500 hover:underline font-semibold">
