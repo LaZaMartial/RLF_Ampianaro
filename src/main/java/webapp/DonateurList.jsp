@@ -41,12 +41,6 @@
         </tbody>
       </table>
     </div>
-
-    <div class="flex justify-center mt-8">
-      <a href="Donateur.jsp" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
-        Ajouter un Donateur
-      </a>
-    </div>
   </div>
 
 </body>

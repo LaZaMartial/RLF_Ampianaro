@@ -2,14 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Élève</title>
+  <title>Eleve</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 min-h-screen p-6">
-
-  <div class="flex justify-end mb-6">
-    <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>
-  </div>
 
   <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8">
     <h1 class="text-2xl font-bold text-center mb-8 text-gray-800">Formulaire Eleve</h1>
@@ -49,8 +45,7 @@
       <input type="hidden" name="action" value="">
 
       <div class="flex justify-center gap-4 mt-6">
-        <input type="button" value="Lister" onclick="return listAll();" class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg" />
-        <input type="button" value="Inserer" onclick="return perform('insert');" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg" />
+        <input type="button" value="S'inscrire" onclick="return perform('insert');" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg" />
       </div>
     </form>
 

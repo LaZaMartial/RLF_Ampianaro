@@ -23,10 +23,6 @@ function listAll() {
 }
 </script>
 
-<div class="flex justify-end mb-6">
-  <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>
-</div>
-
 <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8">
   <h1 class="text-2xl font-bold text-center mb-8 text-gray-800">Donateur</h1>
 
@@ -52,11 +48,8 @@ function listAll() {
     <input type="hidden" name="action" value="">
 
     <div class="flex justify-center gap-4 mt-8">
-      <button type="button" onclick="return listAll();" class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg">
-        Lister
-      </button>
       <button type="button" onclick="return perform('insert');" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
-        Inserer
+        S'inscrire
       </button>
     </div>
   </form>
