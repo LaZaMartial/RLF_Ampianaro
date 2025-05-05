@@ -91,10 +91,10 @@ public class DonProcessor {
 				class_diagram_orm.Don _don = class_diagram_orm.Don.loadDonByORMID(getID());
 				if (_don!= null) {
 					copyFromBean(_don);
-					result = "Search success";
+					result = "Don trouve";
 				}
 				else {
-					result = "Search failed";
+					result = "Don pas trouve";
 				}
 			}
 			catch (PersistentException e) {
@@ -106,10 +106,10 @@ public class DonProcessor {
 				class_diagram_orm.Don _don = class_diagram_orm.Don.createDon();
 				copyToBean(_don, request, response);
 				if (_don.save()) {
-					result = "Insert success";
+					result = "Don inserer";
 				}
 				else {
-					result = "Insert failed";
+					result = "Don pas inserer";
 				}
 			}
 			catch (Exception e) {
@@ -122,10 +122,10 @@ public class DonProcessor {
 				if (_don != null) {
 					copyToBean(_don, request, response);
 					if (_don.save()) {
-						result = "Update success";
+						result = "Don modifie";
 					}
 					else {
-						result = "Update failed";
+						result = "Don pas modifie";
 					}
 				}
 				else  {
@@ -141,10 +141,10 @@ public class DonProcessor {
 			try {
 				class_diagram_orm.Don _don = class_diagram_orm.Don.loadDonByORMID(getID());
 				if (_don != null && _don.deleteAndDissociate()) {
-					result = "Delete success";
+					result = "Don supprime";
 				}
 				else {
-					result = "Delete failed";
+					result = "Don pas supprime";
 				}
 			}
 			catch (PersistentException e)  {

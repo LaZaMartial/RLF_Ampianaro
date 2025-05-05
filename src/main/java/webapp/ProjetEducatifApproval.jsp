@@ -37,30 +37,30 @@ function listAll() {
       <div>
         <label class="block text-gray-700 font-semibold mb-2" for="ID">ID :</label>
         <input type="text" id="ID" name="ID" value="<jsp:getProperty name='ProjetEducatifBean' property='ID'/>" readonly
-          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 focus:outline-none cursor-not-allowed" />
       </div>
 
       <div>
         <label class="block text-gray-700 font-semibold mb-2" for="titre">Titre :</label>
         <input type="text" id="titre" name="titre" value="<jsp:getProperty name='ProjetEducatifBean' property='titre'/>" readonly
-          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 focus:outline-none cursor-not-allowed" />
       </div>
 
       <div>
         <label class="block text-gray-700 font-semibold mb-2" for="description">Description :</label>
         <input type="text" id="description" name="description" value="<jsp:getProperty name='ProjetEducatifBean' property='description'/>" readonly
-          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 focus:outline-none cursor-not-allowed" />
       </div>
 
       <div>
         <label class="block text-gray-700 font-semibold mb-2" for="montantObjectif">Montant Objectif :</label>
         <input type="text" id="montantObjectif" name="montantObjectif" value="<jsp:getProperty name='ProjetEducatifBean' property='montantObjectif'/>" readonly
-          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 cursor-not-allowed" />
+          class="w-full bg-gray-100 border border-gray-300 rounded px-4 py-2 focus:outline-none cursor-not-allowed" />
       </div>
 
       <div>
         <label class="block text-gray-700 font-semibold mb-2" for="status">Status :</label>
-        <select name="status" id="status" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <select name="status" id="status" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#c38c9b]">
           <option value="En attente" <%= "En attente".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>En attente</option>
           <option value="En cours" <%= "En cours".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>En cours</option>
           <option value="Suspendu" <%= "Suspendu".equals(ProjetEducatifBean.getStatus()) ? "selected" : "" %>>Suspendu</option>
@@ -72,11 +72,11 @@ function listAll() {
 
       <div class="flex justify-center gap-4 pt-6">
         <button type="button" onclick="return listAll();"
-          class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg">
+          class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded-lg">
           Voir tout
         </button>
         <button type="button" onclick="return perform('update');"
-          class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
+          class="bg-[#7AA88D] hover:bg-[#AFD4B9] text-white font-semibold py-2 px-6 rounded-lg">
           Mettre a jour
         </button>
       </div>

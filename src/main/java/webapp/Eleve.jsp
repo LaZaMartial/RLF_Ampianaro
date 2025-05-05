@@ -19,33 +19,33 @@
     <form method="POST" name="form1" action="Eleve.jsp" class="space-y-6">
       <div>
         <label class="block font-semibold mb-2">Biographie :</label>
-        <input type="text" name="biographie" value="<jsp:getProperty name='EleveBean' property='biographie'/>" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-indigo-400" />
+        <input type="text" name="biographie" value="<jsp:getProperty name='EleveBean' property='biographie'/>" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
       </div>
       <div>
         <label class="block font-semibold mb-2">Niveau Scolaire :</label>
-        <input type="text" name="niveauScolaire" value="<jsp:getProperty name='EleveBean' property='niveauScolaire'/>" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-indigo-400" />
+        <input type="text" name="niveauScolaire" value="<jsp:getProperty name='EleveBean' property='niveauScolaire'/>" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
       </div>
       <div>
         <label class="block font-semibold mb-2">Date de Naissance :</label>
-        <input type="text" name="dateNaissance" value="<jsp:getProperty name='EleveBean' property='dateNaissance'/>" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-indigo-400" />
+        <input type="text" name="dateNaissance" value="<jsp:getProperty name='EleveBean' property='dateNaissance'/>" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
       </div>
       <div>
         <label class="block font-semibold mb-2">Nom :</label>
-        <input type="text" name="nom" value="<jsp:getProperty name='EleveBean' property='nom'/>" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-indigo-400" />
+        <input type="text" name="nom" value="<jsp:getProperty name='EleveBean' property='nom'/>" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
       </div>
       <div>
         <label class="block font-semibold mb-2">Email :</label>
-        <input type="text" name="email" value="<jsp:getProperty name='EleveBean' property='email'/>" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-indigo-400" />
+        <input type="text" name="email" value="<jsp:getProperty name='EleveBean' property='email'/>" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
       </div>
       <div>
         <label class="block font-semibold mb-2">Mot de Passe :</label>
-        <input type="text" name="motDePasse" value="<jsp:getProperty name='EleveBean' property='motDePasse'/>" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-indigo-400" />
+        <input type="text" name="motDePasse" value="<jsp:getProperty name='EleveBean' property='motDePasse'/>" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
       </div>
 
       <input type="hidden" name="action" value="">
 
       <div class="flex justify-center gap-4 mt-6">
-        <input type="button" value="S'inscrire" onclick="return perform('insert');" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg" />
+        <input type="button" value="S'inscrire" onclick="return perform('insert');" class="bg-[#7AA88D] hover:bg-[#AFD4B9] text-white font-semibold py-2 px-6 rounded-lg" />
       </div>
     </form>
 

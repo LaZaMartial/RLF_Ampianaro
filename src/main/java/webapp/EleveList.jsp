@@ -55,7 +55,7 @@
               out.print("<td class='border px-4 py-2'>");
               out.print("<a href='EleveEdit.jsp?action=search&ID=");
               out.print(eleves[i].getORMID());
-              out.print("'  class='text-indigo-500 hover:underline font-semibold'>");
+              out.print("'  class='text-[#7AA88D] hover:underline font-semibold'>");
               out.print("Modifier");
               out.print("</a>");
               out.println("</td>");

@@ -34,32 +34,32 @@
       <label class="block font-semibold mb-2">ID :</label>
       <input type="text" name="ID" value="<jsp:getProperty name='ProjetEducatifBean' property='ID'/>"
              readonly
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none" />
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Titre :</label>
       <input type="text" name="titre" value="<jsp:getProperty name='ProjetEducatifBean' property='titre'/>"
-             class="w-full border border-gray-300 px-4 py-2 rounded focus:ring-indigo-400 focus:outline-none" />
+             class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Description :</label>
       <input type="text" name="description" value="<jsp:getProperty name='ProjetEducatifBean' property='description'/>"
-             class="w-full border border-gray-300 px-4 py-2 rounded focus:ring-indigo-400 focus:outline-none" />
+             class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Montant Objectif :</label>
       <input type="text" name="montantObjectif" value="<jsp:getProperty name='ProjetEducatifBean' property='montantObjectif'/>"
-             class="w-full border border-gray-300 px-4 py-2 rounded focus:ring-indigo-400 focus:outline-none" />
+             class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Status :</label>
       <input type="text" name="status" value="<jsp:getProperty name='ProjetEducatifBean' property='status'/>"
              readonly
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none" />
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
     </div>
 
     <input type="hidden" name="action" value="">
@@ -68,11 +68,11 @@
 
     <div class="flex justify-center gap-4">
       <button type="button" onclick="return listAll();"
-              class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg">
+              class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded-lg">
         Liste Projets
       </button>
       <button type="button" onclick="return perform('update');"
-              class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg">
+              class="bg-[#7AA88D] hover:bg-[#AFD4B9] text-white font-semibold py-2 px-6 rounded-lg">
         Modifier
       </button>
       <button type="button" onclick="return perform('delete');"

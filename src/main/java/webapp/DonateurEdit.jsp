@@ -34,25 +34,25 @@
       <label class="block font-semibold mb-2">ID :</label>
       <input type="text" name="ID" value="<jsp:getProperty name='DonateurBean' property='ID'/>"
              readonly
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none" readonly/>
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed" readonly/>
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Nom :</label>
       <input type="text" name="nom" value="<jsp:getProperty name='DonateurBean' property='nom'/>"
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none" readonly/>
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed" readonly/>
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Email :</label>
       <input type="email" name="email" value="<jsp:getProperty name='DonateurBean' property='email'/>"
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none" readonly/>
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed" readonly/>
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Mot de Passe :</label>
       <input type="password" name="motDePasse" value="<jsp:getProperty name='DonateurBean' property='motDePasse'/>"
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none" readonly/>
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed" readonly/>
     </div>
 
     <input type="hidden" name="action" value="">
@@ -61,7 +61,7 @@
 
     <div class="flex justify-center gap-4">
       <button type="button" onclick="return listAll();"
-              class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg">
+              class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded-lg">
         Liste Donateurs
       </button>
       <button type="button" onclick="return perform('delete');"

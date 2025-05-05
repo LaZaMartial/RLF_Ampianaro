@@ -52,13 +52,13 @@
           <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getDateCreation() %></td>
           <td class="border border-gray-300 px-4 py-2">
             <a href="DonList.jsp?ID=<%= projetEducatifs[i].getORMID() %>"
-               class="text-blue-500 hover:underline font-semibold">
+               class="text-[#7AA88D] hover:underline font-semibold">
               Voir Don
             </a>
           </td>
           <td class="border border-gray-300 px-4 py-2">
             <a href="ProjetEducatifEdit.jsp?action=search&ID=<%= projetEducatifs[i].getORMID() %>"
-               class="text-blue-500 hover:underline font-semibold">
+               class="text-[#7AA88D] hover:underline font-semibold">
               Modifier
             </a>
           </td>
@@ -71,7 +71,7 @@
   </div>
 
   <div class="flex justify-center mt-8">
-    <a href="ProjetEducatif.jsp" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
+    <a href="ProjetEducatif.jsp" class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded-lg">
       Ajouter un Projet
     </a>
   </div>

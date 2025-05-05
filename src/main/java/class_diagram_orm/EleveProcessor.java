@@ -102,10 +102,10 @@ public class EleveProcessor {
 				class_diagram_orm.Eleve _eleve = class_diagram_orm.Eleve.loadEleveByORMID(getID());
 				if (_eleve!= null) {
 					copyFromBean(_eleve);
-					result = "Search success";
+					result = "Eleve trouve";
 				}
 				else {
-					result = "Search failed";
+					result = "Eleve non trouve";
 				}
 			}
 			catch (PersistentException e) {
@@ -117,10 +117,10 @@ public class EleveProcessor {
 				class_diagram_orm.Eleve _eleve = class_diagram_orm.Eleve.createEleve();
 				copyToBean(_eleve);
 				if (_eleve.save()) {
-					result = "Insert success";
+					result = "Eleve insere";
 				}
 				else {
-					result = "Insert failed";
+					result = "Eleve non insere";
 				}
 			}
 			catch (Exception e) {
@@ -133,10 +133,10 @@ public class EleveProcessor {
 				if (_eleve != null) {
 					copyToBean(_eleve);
 					if (_eleve.save()) {
-						result = "Update success";
+						result = "Eleve modifie";
 					}
 					 else {
-						result = "Update failed";
+						result = "Eleve non modifie";
 					}
 				}
 				 else  {
@@ -152,10 +152,10 @@ public class EleveProcessor {
 			try {
 				class_diagram_orm.Eleve _eleve = class_diagram_orm.Eleve.loadEleveByORMID(getID());
 				if (_eleve != null && _eleve.deleteAndDissociate()) {
-					result = "Delete success";
+					result = "Eleve supprime";
 				}
 				else {
-					result = "Delete failed";
+					result = "Eleve non supprime";
 				}
 			}
 			catch (PersistentException e)  {

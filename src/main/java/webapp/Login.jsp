@@ -10,7 +10,7 @@
 <body class="bg-gray-100 min-h-screen">
 
     <div class="flex justify-end mt-6 mr-6">
-      <button onclick="openDialog()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+      <button onclick="openDialog()" class="px-4 py-2 bg-[#7AA88D] text-white rounded hover:bg-[#AFD4B9]">
           S'inscrire
       </button>
     </div>
@@ -27,18 +27,18 @@
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
         <input type="text" id="email" name="email" required
-               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4afb9]" />
       </div>
 
       <div>
         <label for="motdepasse" class="block text-sm font-medium text-gray-700">Mot de passe</label>
         <input type="password" id="motdepasse" name="motdepasse" required
-               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4afb9]" />
       </div>
 
       <div>
         <button type="submit"
-                class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-200">
+                class="w-full bg-[#c38c9b] text-white py-2 px-4 rounded-md hover:bg-[#d4afb9] transition duration-200">
           Se connecter
         </button>
       </div>
@@ -46,13 +46,13 @@
   </div>
   <!-- Dialog caché -->
   <div id="signupDialog" class="fixed inset-0 bg-black bg-opacity-30 hidden items-center justify-center z-50">
-      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-sm w-full text-center space-y-4">
+      <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center space-y-4">
           <h2 class="text-lg font-semibold">Choisissez le type d'inscription</h2>
           <div class="flex justify-center gap-4">
-              <button onclick="redirectTo('donateur')" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+              <button onclick="redirectTo('donateur')" class="px-4 py-2 bg-[#c38c9b] text-white rounded hover:bg-[#d4afb9]">
                   Donateur
               </button>
-              <button onclick="redirectTo('eleve')" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600">
+              <button onclick="redirectTo('eleve')" class="px-4 py-2 bg-[#c38c9b] text-white rounded hover:bg-[#d4afb9]">
                   Eleve
               </button>
           </div>

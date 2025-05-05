@@ -50,7 +50,7 @@
                   class_diagram_orm.Eleve eleve = projetEducatifs[i].getEleve();
                   if (eleve != null) {
                 %>
-                  <a href="EleveView.jsp?action=search&ID=<%= eleve.getORMID() %>" class="text-indigo-600 hover:underline">
+                  <a href="EleveView.jsp?action=search&ID=<%= eleve.getORMID() %>" class="text-[#7AA88D] hover:underline">
                     <%= eleve.getNom() %>
                   </a>
                 <% } else { %>
@@ -58,7 +58,7 @@
                 <% } %>
               </td>
               <td class="border px-4 py-2">
-                <a href="ProjetEducatifDon.jsp?ID=<%= projetEducatifs[i].getORMID() %>"  class="text-indigo-500 hover:underline font-semibold">
+                <a href="ProjetEducatifDon.jsp?ID=<%= projetEducatifs[i].getORMID() %>"  class="text-[#7AA88D] hover:underline font-semibold">
                   Don
                 </a>
               </td>
@@ -69,7 +69,7 @@
     </div>
 
     <div class="flex justify-center mt-8">
-      <a href="Don.jsp" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
+      <a href="Don.jsp" class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded-lg">
         Ajouter un Don
       </a>
     </div>

@@ -63,7 +63,7 @@
                   out.print("<td class='border px-4 py-2'>");
                   out.print("<a href='EleveView.jsp?action=search&ID=");
                   out.print(eleve.getORMID());
-                  out.print("' class='text-indigo-600 hover:underline'>");
+                  out.print("' class='text-[#7AA88D] hover:underline'>");
                   out.print(eleve.getNom());
                   out.print("</a>");
                   out.println("</td>");
@@ -74,7 +74,7 @@
               out.print("<td class='border px-4 py-2'>");
               out.print("<a href='ProjetEducatifApproval.jsp?action=search&ID=");
               out.print(projetEducatifs[i].getORMID());
-              out.print("' class='text-indigo-500 hover:underline font-semibold'>");
+              out.print("' class='text-[#7AA88D] hover:underline font-semibold'>");
               out.print("Statut");
               out.print("</a>");
               out.println("</td>");
@@ -86,10 +86,10 @@
     </div>
 
     <div class="flex justify-center mt-8">
-      <a href="EleveList.jsp" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg mr-4">
+      <a href="EleveList.jsp" class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded-lg mr-4">
         Liste des Eleves
       </a>
-      <a href="DonateurList.jsp" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
+      <a href="DonateurList.jsp" class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded-lg">
         Liste des Donateurs
       </a>
     </div>

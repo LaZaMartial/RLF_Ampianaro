@@ -34,7 +34,7 @@
             <td class="py-2 px-4 border"><%= donateurs[i].getNom() %></td>
             <td class="py-2 px-4 border"><%= donateurs[i].getEmail() %></td>
             <td class="py-2 px-4 border">
-              <a href="DonateurEdit.jsp?action=search&ID=<%= donateurs[i].getORMID() %>" class="text-indigo-500 hover:underline font-semibold">Modifier</a>
+              <a href="DonateurEdit.jsp?action=search&ID=<%= donateurs[i].getORMID() %>" class="text-[#7AA88D] hover:underline font-semibold">Modifier</a>
             </td>
           </tr>
           <% } %>

@@ -34,20 +34,20 @@
       <label class="block font-semibold mb-2">ID :</label>
       <input type="text" name="ID" value="<jsp:getProperty name='DonateurBean' property='ID'/>"
              readonly
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none" />
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed" />
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Nom :</label>
       <input type="text" name="nom" value="<jsp:getProperty name='DonateurBean' property='nom'/>"
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none"
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed"
              readonly />
     </div>
 
     <div>
       <label class="block font-semibold mb-2">Email :</label>
       <input type="email" name="email" value="<jsp:getProperty name='DonateurBean' property='email'/>"
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none"
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed"
              readonly/>
     </div>
   </form>

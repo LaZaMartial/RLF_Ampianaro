@@ -55,7 +55,7 @@
                     <td class="px-4 py-2 border"><%= dons[i].getDateEnvoi() %></td>
                     <td class="px-4 py-2 border">
                         <% if (donateur != null) { %>
-                            <a href="DonateurView.jsp?action=search&ID=<%= donateur.getORMID() %>" class="text-blue-600 hover:underline">
+                            <a href="DonateurView.jsp?action=search&ID=<%= donateur.getORMID() %>" class="text-[#7AA88D] hover:underline">
                                 <%= donateur.getNom() %>
                             </a>
                         <% } else { %>

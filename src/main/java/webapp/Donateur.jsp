@@ -30,25 +30,25 @@ function listAll() {
     <div>
       <label class="block text-gray-700 font-semibold mb-2">Nom :</label>
       <input type="text" name="nom" value="<jsp:getProperty name='DonateurBean' property='nom'/>"
-             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]">
     </div>
 
     <div>
       <label class="block text-gray-700 font-semibold mb-2">Email :</label>
       <input type="text" name="email" value="<jsp:getProperty name='DonateurBean' property='email'/>"
-             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]">
     </div>
 
     <div>
       <label class="block text-gray-700 font-semibold mb-2">Mot de passe :</label>
       <input type="text" name="motDePasse" value="<jsp:getProperty name='DonateurBean' property='motDePasse'/>"
-             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]">
     </div>
 
     <input type="hidden" name="action" value="">
 
     <div class="flex justify-center gap-4 mt-8">
-      <button type="button" onclick="return perform('insert');" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg">
+      <button type="button" onclick="return perform('insert');" class="bg-[#7AA88D] hover:bg-[#AFD4B9] text-white font-semibold py-2 px-6 rounded-lg">
         S'inscrire
       </button>
     </div>

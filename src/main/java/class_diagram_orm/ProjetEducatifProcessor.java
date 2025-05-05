@@ -120,10 +120,10 @@ public class ProjetEducatifProcessor {
 				class_diagram_orm.ProjetEducatif _projetEducatif = class_diagram_orm.ProjetEducatif.loadProjetEducatifByORMID(getID());
 				if (_projetEducatif!= null) {
 					copyFromBean(_projetEducatif);
-					result = "Search success";
+					result = "Projet trouve";
 				}
 				else {
-					result = "Search failed";
+					result = "Projet non trouve";
 				}
 			}
 			catch (PersistentException e) {
@@ -135,10 +135,10 @@ public class ProjetEducatifProcessor {
 				class_diagram_orm.ProjetEducatif _projetEducatif = class_diagram_orm.ProjetEducatif.createProjetEducatif();
 				copyToBean(_projetEducatif, request, response);
 				if (_projetEducatif.save()) {
-					result = "Insert success";
+					result = "Projet insere";
 				}
 				else {
-					result = "Insert failed";
+					result = "Projet non insere";
 				}
 			}
 			catch (Exception e) {
@@ -151,10 +151,10 @@ public class ProjetEducatifProcessor {
 				if (_projetEducatif != null) {
 					copyToBeanUpdate(_projetEducatif, request, response);
 					if (_projetEducatif.save()) {
-						result = "Update success";
+						result = "Projet modifie";
 					}
 					 else {
-						result = "Update failed";
+						result = "Projet non modifie";
 					}
 				}
 				 else  {
@@ -170,10 +170,10 @@ public class ProjetEducatifProcessor {
 			try {
 				class_diagram_orm.ProjetEducatif _projetEducatif = class_diagram_orm.ProjetEducatif.loadProjetEducatifByORMID(getID());
 				if (_projetEducatif != null && _projetEducatif.deleteAndDissociate()) {
-					result = "Delete success";
+					result = "Projet supprime";
 				}
 				else {
-					result = "Delete failed";
+					result = "Projet non supprime";
 				}
 			}
 			catch (PersistentException e)  {

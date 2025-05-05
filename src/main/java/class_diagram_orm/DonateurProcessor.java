@@ -72,10 +72,10 @@ public class DonateurProcessor {
 				class_diagram_orm.Donateur _donateur = class_diagram_orm.Donateur.loadDonateurByORMID(getID());
 				if (_donateur!= null) {
 					copyFromBean(_donateur);
-					result = "Search success";
+					result = "Donateur trouve";
 				}
 				else {
-					result = "Search failed";
+					result = "Donateur pas trouve";
 				}
 			}
 			catch (PersistentException e) {
@@ -87,10 +87,10 @@ public class DonateurProcessor {
 				class_diagram_orm.Donateur _donateur = class_diagram_orm.Donateur.createDonateur();
 				copyToBean(_donateur);
 				if (_donateur.save()) {
-					result = "Insert success";
+					result = "Donateur inserer";
 				}
 				else {
-					result = "Insert failed";
+					result = "Donateur pas inserer";
 				}
 			}
 			catch (Exception e) {
@@ -103,10 +103,10 @@ public class DonateurProcessor {
 				if (_donateur != null) {
 					copyToBean(_donateur);
 					if (_donateur.save()) {
-						result = "Update success";
+						result = "Donateur modifie";
 					}
 					 else {
-						result = "Update failed";
+						result = "Donateur pas modifie";
 					}
 				}
 				 else  {
@@ -122,10 +122,10 @@ public class DonateurProcessor {
 			try {
 				class_diagram_orm.Donateur _donateur = class_diagram_orm.Donateur.loadDonateurByORMID(getID());
 				if (_donateur != null && _donateur.deleteAndDissociate()) {
-					result = "Delete success";
+					result = "Donateur supprime";
 				}
 				else {
-					result = "Delete failed";
+					result = "Donateur non supprime";
 				}
 			}
 			catch (PersistentException e)  {

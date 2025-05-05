@@ -50,7 +50,7 @@
           id="montant"
           name="montant"
           value="<jsp:getProperty name='DonBean' property='montant'/>"
-          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]"
           required
         />
       </div>
@@ -60,7 +60,7 @@
         <select
           id="projetEducatif_projetEducatifID"
           name="projetEducatif_projetEducatifID"
-          class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]"
           required
         >
           <option value="">-- Choisir un projet --</option>
@@ -79,15 +79,15 @@
         <button
           type="button"
           onclick="return listAll();"
-          class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded"
+          class="bg-[#c38c9b] hover:bg-[#d4afb9] text-white font-semibold py-2 px-6 rounded"
         >
-          Voir Tout
+          Liste Projet
         </button>
 
         <button
           type="button"
           onclick="return perform('insert');"
-          class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded"
+          class="bg-[#7AA88D] hover:bg-[#AFD4B9] text-white font-semibold py-2 px-6 rounded"
         >
           Inserer
         </button>
