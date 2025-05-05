@@ -10,9 +10,9 @@
 <body class="bg-gray-100 min-h-screen">
 
     <div class="flex justify-end mt-6 mr-6">
-      <button onclick="openDialog()" class="px-4 py-2 bg-[#7AA88D] text-white rounded hover:bg-[#AFD4B9]">
+      <a onclick="openDialog()" class="px-4 py-2 text-[#7AA88D] hover:underline">
           S'inscrire
-      </button>
+      </a>
     </div>
 
   <div class="bg-white mx-auto mt-20 p-8 rounded-lg shadow-md w-full max-w-md">

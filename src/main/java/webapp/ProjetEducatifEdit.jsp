@@ -34,7 +34,7 @@
       <label class="block font-semibold mb-2">ID :</label>
       <input type="text" name="ID" value="<jsp:getProperty name='ProjetEducatifBean' property='ID'/>"
              readonly
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg focus:outline-none cursor-not-allowed" />
     </div>
 
     <div>
@@ -59,7 +59,7 @@
       <label class="block font-semibold mb-2">Status :</label>
       <input type="text" name="status" value="<jsp:getProperty name='ProjetEducatifBean' property='status'/>"
              readonly
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c38c9b]" />
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-lg focus:outline-none cursor-not-allowed" />
     </div>
 
     <input type="hidden" name="action" value="">

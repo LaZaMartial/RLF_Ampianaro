@@ -27,7 +27,7 @@
 </div>
 
 <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8">
-  <h1 class="text-2xl font-bold text-center mb-8 text-gray-800">Modifier Eleve</h1>
+  <h1 class="text-2xl font-bold text-center mb-8 text-gray-800">Supprimer Eleve</h1>
 
   <form method="POST" name="form1" action="EleveEdit.jsp" class="space-y-6">
     <div>
