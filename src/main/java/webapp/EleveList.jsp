@@ -7,9 +7,9 @@
   <!-- Intégration de Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen p-6">
+<body class="bg-[url(./assets/bg.png)] bg-cover bg-no-repeat bg-center bg-fixed h-screen">
 
-  <div class="flex justify-end mb-6">
+  <div class="flex justify-end m-6">
     <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>
   </div>
 

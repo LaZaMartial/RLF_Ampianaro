@@ -7,9 +7,9 @@
   <!-- Intégration de Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-[url(./assets/bg.png)] bg-cover bg-no-repeat bg-center bg-fixed h-screen">
 
-    <div class="flex justify-end mt-6 mr-6">
+    <div class="flex justify-end m-6">
       <a onclick="openDialog()" class="px-4 py-2 text-[#7AA88D] hover:underline">
           S'inscrire
       </a>

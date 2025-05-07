@@ -5,7 +5,7 @@
   <title>Donateur</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen p-6">
+<body class="bg-[url(./assets/bg.png)] bg-cover bg-no-repeat bg-center bg-fixed h-screen">
 
 <jsp:useBean id="DonateurBean" scope="page" class="class_diagram_orm.DonateurProcessor" />
 <jsp:setProperty name="DonateurBean" property="*" />
@@ -29,7 +29,8 @@ function listAll() {
 }
 </script>
 
-<div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8">
+
+<div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 mt-6">
   <h1 class="text-2xl font-bold text-center mb-8 text-gray-800">Donateur</h1>
 
   <form method="POST" name="form1" action="Donateur.jsp" class="space-y-6">
