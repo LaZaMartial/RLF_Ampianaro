@@ -39,6 +39,11 @@
       } catch (Exception e) {
         e.printStackTrace();
       }
+
+      if("insert".equals(request.getParameter("action")) && result.contains("Don insere")) {
+          response.sendRedirect("ProjetEducatifDonList.jsp");
+          return;
+        }
     %>
 
     <form method="POST" name="form1" action="Don.jsp" class="space-y-6">

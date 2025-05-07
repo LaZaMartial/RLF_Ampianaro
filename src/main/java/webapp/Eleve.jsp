@@ -14,6 +14,11 @@
     <jsp:setProperty name="EleveBean" property="*" />
     <%
       String result = EleveBean.process();
+
+      if("insert".equals(request.getParameter("action")) && result.contains("Eleve insere")) {
+              response.sendRedirect("Login.jsp");
+              return;
+          }
     %>
 
     <form method="POST" name="form1" action="Eleve.jsp" class="space-y-6">

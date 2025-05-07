@@ -20,7 +20,13 @@
 
 <jsp:useBean id="EleveBean" scope="page" class="class_diagram_orm.EleveProcessor" />
 <jsp:setProperty name="EleveBean" property="*" />
-<% String result = EleveBean.process(); %>
+<% String result = EleveBean.process();
+
+    if("delete".equals(request.getParameter("action")) && result.contains("Eleve supprime")) {
+        response.sendRedirect("EleveList.jsp");
+        return;
+    }
+%>
 
 <div class="flex justify-end mb-6">
   <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>

@@ -7,6 +7,11 @@
   <%
     String result = DonBean.process(request, response);
     String projetID = request.getParameter("ID");
+
+      if("insert".equals(request.getParameter("action")) && result.contains("Don insere")) {
+          response.sendRedirect("ProjetEducatifDonList.jsp");
+          return;
+        }
   %>
 <head>
   <meta charset="UTF-8">

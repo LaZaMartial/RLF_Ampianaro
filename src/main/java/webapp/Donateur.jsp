@@ -9,7 +9,13 @@
 
 <jsp:useBean id="DonateurBean" scope="page" class="class_diagram_orm.DonateurProcessor" />
 <jsp:setProperty name="DonateurBean" property="*" />
-<% String result = DonateurBean.process(); %>
+<% String result = DonateurBean.process();
+
+    if("insert".equals(request.getParameter("action")) && result.contains("Donateur insere")) {
+        response.sendRedirect("Login.jsp");
+        return;
+    }
+%>
 
 <script>
 function perform(command) {

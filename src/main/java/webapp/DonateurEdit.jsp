@@ -20,7 +20,13 @@
 
 <jsp:useBean id="DonateurBean" scope="page" class="class_diagram_orm.DonateurProcessor" />
 <jsp:setProperty name="DonateurBean" property="*" />
-<% String result = DonateurBean.process(); %>
+<% String result = DonateurBean.process();
+
+    if("delete".equals(request.getParameter("action")) && result.contains("Donateur supprime")) {
+        response.sendRedirect("DonateurList.jsp");
+        return;
+    }
+%>
 
 <div class="flex justify-end mb-6">
   <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>

@@ -9,7 +9,13 @@
 
 <jsp:useBean id="ProjetEducatifBean" scope="page" class="class_diagram_orm.ProjetEducatifProcessor" />
 <jsp:setProperty name="ProjetEducatifBean" property="*" />
-<% String result = ProjetEducatifBean.process(request, response); %>
+<% String result = ProjetEducatifBean.process(request, response);
+
+    if("update".equals(request.getParameter("action")) && result.contains("Projet modifie")) {
+      response.sendRedirect("ProjetEducatifApprovalList.jsp");
+      return;
+    }
+%>
 
 <script>
 function perform(command) {

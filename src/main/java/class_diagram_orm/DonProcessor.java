@@ -106,10 +106,10 @@ public class DonProcessor {
 				class_diagram_orm.Don _don = class_diagram_orm.Don.createDon();
 				copyToBean(_don, request, response);
 				if (_don.save()) {
-					result = "Don inserer";
+					result = "Don insere";
 				}
 				else {
-					result = "Don pas inserer";
+					result = "Don pas insere";
 				}
 			}
 			catch (Exception e) {

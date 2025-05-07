@@ -38,6 +38,13 @@
     </div>
 
     <div>
+      <label class="block font-semibold mb-2">Nom :</label>
+      <input type="text" name="nom" value="<jsp:getProperty name='EleveBean' property='nom'/>"
+             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed"
+             readonly/>
+    </div>
+
+    <div>
       <label class="block font-semibold mb-2">Biographie :</label>
       <input type="text" name="biographie" value="<jsp:getProperty name='EleveBean' property='biographie'/>"
              class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed"
@@ -54,13 +61,6 @@
     <div>
       <label class="block font-semibold mb-2">Date de Naissance :</label>
       <input type="text" name="dateNaissance" value="<jsp:getProperty name='EleveBean' property='dateNaissance'/>"
-             class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed"
-             readonly/>
-    </div>
-
-    <div>
-      <label class="block font-semibold mb-2">Nom :</label>
-      <input type="text" name="nom" value="<jsp:getProperty name='EleveBean' property='nom'/>"
              class="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded focus:outline-none cursor-not-allowed"
              readonly/>
     </div>

@@ -20,7 +20,13 @@
 
 <jsp:useBean id="ProjetEducatifBean" scope="page" class="class_diagram_orm.ProjetEducatifProcessor" />
 <jsp:setProperty name="ProjetEducatifBean" property="*" />
-<% String result = ProjetEducatifBean.process(request, response); %>
+<% String result = ProjetEducatifBean.process(request, response);
+
+    if("insert".equals(request.getParameter("action")) && result.contains("Projet insere")) {
+          response.sendRedirect("ProjetEducatifList.jsp");
+          return;
+      }
+ %>
 
 <div class="flex justify-end mb-6">
   <a href="logout" class="text-red-500 hover:underline font-semibold">Deconnexion</a>
