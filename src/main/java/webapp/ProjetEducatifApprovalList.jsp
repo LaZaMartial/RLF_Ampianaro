@@ -20,7 +20,6 @@
       <table class="min-w-full table-auto border-collapse">
         <thead>
           <tr class="bg-gray-200">
-            <th class="border px-4 py-2">ID</th>
             <th class="border px-4 py-2">Titre</th>
             <th class="border px-4 py-2">Description</th>
             <th class="border px-4 py-2">Montant Objectif</th>
@@ -36,9 +35,6 @@
           class_diagram_orm.ProjetEducatif[] projetEducatifs = class_diagram_orm.ProjetEducatif.listProjetEducatifByQuery(null, null);
           for (int i = 0; i < projetEducatifs.length; i++) {
               out.print("<tr class='hover:bg-gray-100'>");
-              out.print("<td class='border px-4 py-2'>");
-              out.print(projetEducatifs[i].getORMID());
-              out.print("</td>");
               out.print("<td class='border px-4 py-2'>");
               out.print(projetEducatifs[i].getTitre());
               out.println("</td>");

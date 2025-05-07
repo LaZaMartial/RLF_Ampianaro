@@ -1,15 +1,3 @@
-ALTER TABLE Donateur DROP CONSTRAINT FKDonateur994156;
-ALTER TABLE Eleve DROP CONSTRAINT FKEleve989781;
-ALTER TABLE Administrateur DROP CONSTRAINT FKAdministra325008;
-ALTER TABLE Don DROP CONSTRAINT faire;
-ALTER TABLE Don DROP CONSTRAINT recevoir;
-ALTER TABLE ProjetEducatif DROP CONSTRAINT posseder;
-DROP TABLE IF EXISTS Utilisateur CASCADE;
-DROP TABLE IF EXISTS Donateur CASCADE;
-DROP TABLE IF EXISTS Eleve CASCADE;
-DROP TABLE IF EXISTS Don CASCADE;
-DROP TABLE IF EXISTS ProjetEducatif CASCADE;
-DROP TABLE IF EXISTS Administrateur CASCADE;
 CREATE TABLE Utilisateur (IdUtilisateur SERIAL NOT NULL, Nom varchar(255), Email varchar(255), MotDePasse varchar(255), PRIMARY KEY (IdUtilisateur));
 CREATE TABLE Donateur (IdUtilisateur int4 NOT NULL, PRIMARY KEY (IdUtilisateur));
 CREATE TABLE Eleve (Biographie varchar(255), NiveauScolaire varchar(255), DateNaissance varchar(255), IdUtilisateur int4 NOT NULL, PRIMARY KEY (IdUtilisateur));

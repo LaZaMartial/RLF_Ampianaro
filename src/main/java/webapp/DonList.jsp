@@ -32,7 +32,6 @@
         <table class="min-w-full table-auto border border-gray-300 mb-6">
             <thead>
                 <tr class="bg-gray-100">
-                    <th class="px-4 py-2 border">ID</th>
                     <th class="px-4 py-2 border">Montant</th>
                     <th class="px-4 py-2 border">Date d'envoi</th>
                     <th class="px-4 py-2 border">Donateur</th>
@@ -50,7 +49,6 @@
                         Donateur donateur = dons[i].getDonateur();
                 %>
                 <tr class="hover:bg-gray-50">
-                    <td class="px-4 py-2 border"><%= dons[i].getORMID() %></td>
                     <td class="px-4 py-2 border"><%= dons[i].getMontant() %></td>
                     <td class="px-4 py-2 border"><%= dons[i].getDateEnvoi() %></td>
                     <td class="px-4 py-2 border">

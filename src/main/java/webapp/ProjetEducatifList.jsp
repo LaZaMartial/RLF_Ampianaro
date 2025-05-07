@@ -23,7 +23,6 @@
     <table class="w-full table-auto border-collapse border border-gray-300">
       <thead class="bg-gray-200">
         <tr>
-          <th class="border border-gray-300 px-4 py-2">ID</th>
           <th class="border border-gray-300 px-4 py-2">Titre</th>
           <th class="border border-gray-300 px-4 py-2">Description</th>
           <th class="border border-gray-300 px-4 py-2">Montant Objectif</th>
@@ -43,7 +42,6 @@
       }
 %>
         <tr class="text-center">
-          <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getORMID() %></td>
           <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getTitre() %></td>
           <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getDescription() %></td>
           <td class="border border-gray-300 px-4 py-2"><%= projetEducatifs[i].getMontantObjectif() %></td>

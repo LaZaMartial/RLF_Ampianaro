@@ -18,7 +18,7 @@ License Type: Purchased
 		<property name="montantCollecte" column="MontantCollecte" type="float" not-null="true" lazy="false"/>
 		<property name="status" column="Status" type="string" length="255" not-null="false" lazy="false"/>
 		<property name="dateCreation" column="DateCreation" type="string" length="255" not-null="false" lazy="false"/>
-		<set name="ORM_Dons" lazy="true" cascade="save-update,lock" inverse="true">
+		<set name="ORM_Dons" lazy="true" cascade="all-delete-orphan" inverse="true">
 			<key column="IdProjetEducatif" not-null="true"/>
 			<one-to-many class="class_diagram_orm.Don"/>
 		</set>

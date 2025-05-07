@@ -18,7 +18,6 @@
       <table class="min-w-full bg-white border border-gray-300">
         <thead>
           <tr class="bg-gray-200 text-gray-700">
-            <th class="py-3 px-4 border">ID</th>
             <th class="py-3 px-4 border">Nom</th>
             <th class="py-3 px-4 border">Email</th>
             <th class="py-3 px-4 border">Action</th>
@@ -30,7 +29,6 @@
             for (int i = 0; i < donateurs.length; i++) {
           %>
           <tr class="text-center hover:bg-gray-50">
-            <td class="py-2 px-4 border"><%= donateurs[i].getORMID() %></td>
             <td class="py-2 px-4 border"><%= donateurs[i].getNom() %></td>
             <td class="py-2 px-4 border"><%= donateurs[i].getEmail() %></td>
             <td class="py-2 px-4 border">

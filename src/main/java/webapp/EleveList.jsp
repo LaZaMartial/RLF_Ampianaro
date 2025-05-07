@@ -20,7 +20,6 @@
       <table class="min-w-full table-auto border-collapse">
         <thead>
           <tr class="bg-gray-200">
-            <th class="border px-4 py-2">ID</th>
             <th class="border px-4 py-2">Biographie</th>
             <th class="border px-4 py-2">Niveau Scolaire</th>
             <th class="border px-4 py-2">Date Naissance</th>
@@ -34,9 +33,6 @@
           class_diagram_orm.Eleve[] eleves = class_diagram_orm.Eleve.listEleveByQuery(null, null);
           for (int i = 0; i < eleves.length; i++) {
               out.print("<tr class='hover:bg-gray-100'>");
-              out.print("<td class='border px-4 py-2'>");
-              out.print(eleves[i].getORMID());
-              out.print("</td>");
               out.print("<td class='border px-4 py-2'>");
               out.print(eleves[i].getBiographie());
               out.println("</td>");
